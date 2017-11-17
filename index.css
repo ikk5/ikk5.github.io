@@ -1,0 +1,61 @@
+/*    --------------------------------------------------
+	:: General
+	-------------------------------------------------- */
+body {
+	font-family: 'Open Sans', sans-serif;
+	/*background: url("http://rshunter-author.com/wp-content/uploads/2013/03/Psychonauts_Logo.jpg");*/
+	background: url("https://img00.deviantart.net/3979/i/2009/314/0/3/psychonauts_wallpaper_by_ayem.jpg");
+	background-color: black;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center center;
+}
+th {
+	cursor: pointer;
+}
+.content h1 {
+	text-align: center;
+	color: white;
+}
+.content p {
+	color: #6d6d6d;
+    font-size: 12px;
+    text-align: center;
+}
+
+/*	--------------------------------------------------
+	:: Table Filter
+	-------------------------------------------------- */
+.panel {
+	border: 1px solid #ddd;
+	background-color: #fcfcfc;
+}
+.panel .btn-group {
+	margin: 15px 0 30px;
+}
+.panel .btn-group .btn {
+	transition: background-color .3s ease;
+}
+.table-filter {
+	background-color: #fff;
+	border-bottom: 1px solid #eee;
+}
+.table-filter tbody tr:hover {
+	cursor: pointer;
+	background-color: #eee;
+}
+.table-filter tbody tr td {
+	padding: 10px;
+	vertical-align: middle;
+	border-top-color: #eee;
+}
+.table-filter tbody tr.selected td {
+	background-color: #eee;
+}
+.table-filter tr td:first-child {
+	width: 38px;
+}
+.table-filter tr td:nth-child(2) {
+	width: 35px;
+}

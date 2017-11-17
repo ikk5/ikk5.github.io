@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+
+<!-- todo -->
+<!-- search table:  https://www.w3schools.com/howto/howto_js_filter_table.asp -->
+<!-- count elements after filter dropdown met checkboxes voor waar je op wil filteren -->
+
+    <title>My collection</title>
+	<link rel="stylesheet" type="text/css" href="index.css"/>
+
+  </head>
+
+  <body class="background">
+  <div class="container">
+	<div class="row">
+		<section class="content">
+			<h1>My collection</h1>
+			<div class="col-xs-100">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<div class="pull-right">
+							<div class="btn-group">
+							<!-- Hier komt een knop voor elk platform uit de Platforms tab, waarmee gefilterd kan worden -->
+								[[BUTTONS]]
+								<button type="button" class="btn btn-default btn-filter" data-target="all">All</button>
+							</div>
+						</div>
+						<div class="table-container">
+							<table id="collectionTable" class="table table-filter">
+								<thead>
+									<!-- <th class="col-xs-2" onclick="sortTable(0)">Title</th>
+									<th class="col-xs-1" onclick="sortTable(1)">Platform</th>
+									<th class="col-xs-1" onclick="sortTable(2)">Release date</th> -->
+									<!-- Hier komen alle tabel headers -->
+									[[THEADERS]]
+								</thead>
+								<tbody>
+									<!-- <tr data-status="gamecube" onclick="document.location = 'details/7 - Pikmin.xhtml';">
+										<td>Pikmin</td>
+										<td>Gamecube</td>
+										<td>14 June 2002</td>
+									</tr>
+									<tr data-status="ps2">
+										<td>Shadow of the Colossus</td>
+										<td>PS2</td>
+										<td>14 June 2002</td>
+									</tr> -->
+									<!-- Hier komt de daadwerkelijke data -->
+									[[TROWS]]
+								</tbody>
+							</table>
+						 </div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+	</div>
+</div>
+<script>
+$(document).ready(function () {
+    $('.btn-filter').on('click', function () {
+      var $target = $(this).data('target');
+      if ($target != 'all') {
+        $('tbody tr').css('display', 'none');
+        $('tbody tr[data-status="' + $target + '"]').show();
+      } else {
+        $('tbody tr').css('display', 'none').fadeIn('slow');
+      }
+    });
+
+ });
+ function sortTable(n) {
+  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+  table = document.getElementById("collectionTable");
+  switching = true;
+  dir = "asc";
+  while (switching) {
+    switching = false;
+    rows = table.getElementsByTagName("TR");
+    for (i = 1; i < (rows.length - 1); i++) {
+      shouldSwitch = false;
+      x = rows[i].getElementsByTagName("TD")[n];
+      y = rows[i + 1].getElementsByTagName("TD")[n];
+      if (dir == "asc") {
+        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+          shouldSwitch= true;
+          break;
+        }
+      } else if (dir == "desc") {
+        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+          shouldSwitch= true;
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      switchcount ++;
+    } else {
+      if (switchcount == 0 && dir == "asc") {
+        dir = "desc";
+        switching = true;
+      }
+    }
+  }
+}
+</script>
+   </body>
+</html>
