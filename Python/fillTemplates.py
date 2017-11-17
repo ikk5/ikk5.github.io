@@ -131,7 +131,7 @@ while current_row < num_rows:
             if sheet.cell_value(0, current_col) == 'Platform':
                 platform = cellValue
             details += sheet.cell_value(0, current_col) + ": " + str(cellValue) + '<br />'
-            trow += tdSurround(cellValue)
+        trow += tdSurround(cellValue)
         current_col += 1
     trows += trSurround(platform, numTitle, trow)
     fillTemplate(title, details, filename)
