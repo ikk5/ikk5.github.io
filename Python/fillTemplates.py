@@ -1,7 +1,6 @@
 __author__ = 'Benjamin'
 
-import os
-import xlrd
+import os, xlrd, re
 from shutil import copyfile
 from datetime import datetime
 
@@ -19,8 +18,7 @@ num_platforms = platformSheet.nrows - 1
 buttonStart = '<button type="button" class="btn btn-success btn-filter" data-target="'
 buttonMiddle = '">'
 buttonEnd = '</button>\n'
-theadStart = '<th class="col-xs-2" onclick="sortTable('
-theadMiddle = ')">'
+theadStart = '<th class="col-xs-2">'
 theadEnd = '</th>\n'
 trStart = '<tr data-status="'
 trMiddle = '" onclick="document.location = \''
@@ -43,7 +41,7 @@ def buildTHeaders():
     curCol = 0
     while curCol < num_cols:
         thead = sheet.cell_value(0, curCol)
-        theaders += (theadStart + str(curCol) + theadMiddle + thead + theadEnd)
+        theaders += (theadStart + thead + theadEnd)
         curCol += 1
     return theaders
 
@@ -83,10 +81,10 @@ def trSurround(platform, link, tds):
 def tdSurround(string):
     return '<td>' + string + '</td>\n'
 
-# Verwijderd . en : uit de filenaam, anders kan windows de file niet aanmaken
+
+# Verwijderd leestekens uit de filenaam, anders kan windows de file niet aanmaken of de link niet geopend worden
 def cleanString(string):
-    string = str(string).replace(".", "")
-    return string.replace(":", "")
+    return re.sub(r'[^\w\s]','',string)
 
 
 # vul de placeholders [[TITLE]] en [[DETAILS]] in de templates
@@ -135,7 +133,7 @@ while current_row < num_rows:
         current_col += 1
     trows += trSurround(platform, numTitle, trow)
     fillTemplate(title, details, filename)
-    # print(details)
+    print(details)
     current_row += 1
 
 fillIndexTemplate()

@@ -59,3 +59,8 @@ th {
 .table-filter tr td:nth-child(2) {
 	width: 35px;
 }
+/* Sortable tables */
+table.sortable thead {
+    font-weight: bold;
+    cursor: default;
+}
