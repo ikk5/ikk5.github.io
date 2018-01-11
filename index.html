@@ -48,8 +48,8 @@
 <button type="button" class="btn btn-success btn-filter" data-target="N64">N64</button>
 <button type="button" class="btn btn-success btn-filter" data-target="NDS">NDS</button>
 <button type="button" class="btn btn-success btn-filter" data-target="NES">NES</button>
+<button type="button" class="btn btn-success btn-filter" data-target="Others">Others</button>
 <button type="button" class="btn btn-success btn-filter" data-target="Philips Videopac">Philips Videopac</button>
-<button type="button" class="btn btn-success btn-filter" data-target="PS Vita">PS Vita</button>
 <button type="button" class="btn btn-success btn-filter" data-target="PS1">PS1</button>
 <button type="button" class="btn btn-success btn-filter" data-target="PS2">PS2</button>
 <button type="button" class="btn btn-success btn-filter" data-target="PS3">PS3</button>
@@ -70,19 +70,16 @@
 						<div class="table-container">
 							<table id="collectionTable" class="table table-filter sortable">
 								<thead>
-									<!-- <th class="col-xs-2" onclick="sortTable(0)">Title</th>
-									<th class="col-xs-1" onclick="sortTable(1)">Platform</th>
-									<th class="col-xs-1" onclick="sortTable(2)">Release date</th> -->
+									<!-- <th class="col-xs-2">Title</th>
+									<th class="col-xs-1">Platform</th>
+									<th class="col-xs-1">Release date</th> -->
 									<!-- Hier komen alle tabel headers -->
 									<th class="col-xs-2">Titel</th>
 <th class="col-xs-2">Platform</th>
 <th class="col-xs-2">C</th>
 <th class="col-xs-2">I</th>
 <th class="col-xs-2">B</th>
-<th class="col-xs-2">Played</th>
-<th class="col-xs-2">Beaten</th>
 <th class="col-xs-2">Release date</th>
-<th class="col-xs-2">Sealed</th>
 <th class="col-xs-2">Regio</th>
 
 								</thead>
@@ -90,12 +87,12 @@
 									<!-- <tr data-status="gamecube" onclick="document.location = 'details/7 - Pikmin.xhtml';">
 										<td>Pikmin</td>
 										<td>Gamecube</td>
-										<td>14 June 2002</td>
+										<td sorttable_customkey="20020614">14-06-2002</td>
 									</tr>
 									<tr data-status="ps2">
 										<td>Shadow of the Colossus</td>
 										<td>PS2</td>
-										<td>14 June 2002</td>
+										<td sorttable_customkey="20060217">17-02-2006</td>
 									</tr> -->
 									<!-- Hier komt de daadwerkelijke data -->
 									<tr data-status="Switch" onclick="document.location = 'details/1 - Super Mario Odyssey.xhtml';">
@@ -104,10 +101,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td>Y</td>
-<td>Y</td>
-<td></td>
-<td></td>
+<td sorttable_customkey="20171027">27-10-2017</td>
 <td>PAL</td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/2 - Luigis Mansion.xhtml';">
 <td>Luigi's Mansion</td>
@@ -115,10 +109,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td>Y</td>
-<td>Y</td>
-<td>03 May 2002</td>
-<td></td>
+<td sorttable_customkey="20020503">03-05-2002</td>
 <td>PAL</td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/3 - Ribbit King.xhtml';">
 <td>Ribbit King</td>
@@ -126,10 +117,7 @@
 <td>Y</td>
 <td>N</td>
 <td>Y</td>
-<td>Y</td>
-<td>N</td>
-<td>03 September 2004</td>
-<td></td>
+<td sorttable_customkey="20040903">03-09-2004</td>
 <td>PAL</td>
 </tr><tr data-status="Amiibo" onclick="document.location = 'details/4 - Gold Mario.xhtml';">
 <td>Gold Mario</td>
@@ -139,18 +127,12 @@
 <td>Y</td>
 <td></td>
 <td></td>
-<td></td>
-<td></td>
-<td></td>
 </tr><tr data-status="Console" onclick="document.location = 'details/5 - Purple Gamecube.xhtml';">
 <td>Purple Gamecube</td>
 <td>Console</td>
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td></td>
 <td></td>
 <td>PAL</td>
 </tr><tr data-status="Disney Infinity" onclick="document.location = 'details/6 - Stitch.xhtml';">
@@ -161,19 +143,13 @@
 <td></td>
 <td></td>
 <td></td>
-<td></td>
-<td></td>
-<td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/7 - Pikmin.xhtml';">
 <td>Pikmin</td>
 <td>Gamecube</td>
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td>Y</td>
-<td>Y</td>
-<td>14 June 2002</td>
-<td></td>
+<td sorttable_customkey="20020614">14-06-2002</td>
 <td>PAL</td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/8 - Smashing Drive.xhtml';">
 <td>Smashing Drive</td>
@@ -181,10 +157,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>18 February 2002</td>
-<td></td>
+<td sorttable_customkey="20020218">18-02-2002</td>
 <td>NTSC</td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/9 - PacMan Fever.xhtml';">
 <td>Pac-Man Fever</td>
@@ -192,10 +165,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>09 March 2002</td>
-<td></td>
+<td sorttable_customkey="20020309">09-03-2002</td>
 <td>NTSC</td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/10 - Burnout.xhtml';">
 <td>Burnout</td>
@@ -203,10 +173,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td>Y</td>
-<td>N</td>
-<td>03 May 2002</td>
-<td></td>
+<td sorttable_customkey="20020503">03-05-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/11 - Driven.xhtml';">
 <td>Driven</td>
@@ -214,10 +181,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>03 May 2002</td>
-<td></td>
+<td sorttable_customkey="20020503">03-05-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/12 - Donald Duck Goin Quackers.xhtml';">
 <td>Donald Duck: Goin' Quackers</td>
@@ -225,10 +189,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>03 May 2002</td>
-<td></td>
+<td sorttable_customkey="20020503">03-05-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/13 - 2002 FIFA World Cup.xhtml';">
 <td>2002 FIFA World Cup</td>
@@ -236,10 +197,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>03 May 2002</td>
-<td></td>
+<td sorttable_customkey="20020503">03-05-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/14 - International Superstar Soccer 2.xhtml';">
 <td>International Superstar Soccer 2</td>
@@ -247,10 +205,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>03 May 2002</td>
-<td></td>
+<td sorttable_customkey="20020503">03-05-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/15 - Tony Hawks Pro Skater 3.xhtml';">
 <td>Tony Hawk's Pro Skater 3</td>
@@ -258,10 +213,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>03 May 2002</td>
-<td></td>
+<td sorttable_customkey="20020503">03-05-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/16 - Star Wars Rogue Leader Rogue Squadron II.xhtml';">
 <td>Star Wars Rogue Leader: Rogue Squadron II</td>
@@ -269,10 +221,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>03 May 2002</td>
-<td></td>
+<td sorttable_customkey="20020503">03-05-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/17 - ExtremeG 3.xhtml';">
 <td>Extreme-G 3</td>
@@ -280,10 +229,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>03 May 2002</td>
-<td></td>
+<td sorttable_customkey="20020503">03-05-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/18 - Universal Studios Theme Parks Adventure.xhtml';">
 <td>Universal Studios Theme Parks Adventure</td>
@@ -291,10 +237,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>03 May 2002</td>
-<td></td>
+<td sorttable_customkey="20020503">03-05-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/19 - Wave Race Blue Storm.xhtml';">
 <td>Wave Race: Blue Storm</td>
@@ -302,10 +245,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>03 May 2002</td>
-<td></td>
+<td sorttable_customkey="20020503">03-05-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/20 - Disneys Tarzan Untamed.xhtml';">
 <td>Disney's Tarzan Untamed</td>
@@ -313,10 +253,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>03 May 2002</td>
-<td></td>
+<td sorttable_customkey="20020503">03-05-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/21 - Dave Mirra Freestyle BMX 2.xhtml';">
 <td>Dave Mirra Freestyle BMX 2</td>
@@ -324,10 +261,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>03 May 2002</td>
-<td></td>
+<td sorttable_customkey="20020503">03-05-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/22 - Crazy Taxi.xhtml';">
 <td>Crazy Taxi</td>
@@ -335,10 +269,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>03 May 2002</td>
-<td></td>
+<td sorttable_customkey="20020503">03-05-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/23 - Batman Vengeance.xhtml';">
 <td>Batman Vengeance</td>
@@ -346,10 +277,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>03 May 2002</td>
-<td></td>
+<td sorttable_customkey="20020503">03-05-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/24 - Bloody Roar Primal Fury.xhtml';">
 <td>Bloody Roar: Primal Fury</td>
@@ -357,10 +285,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>03 May 2002</td>
-<td></td>
+<td sorttable_customkey="20020503">03-05-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/25 - ESPN International Winter Sports 2002.xhtml';">
 <td>ESPN International Winter Sports 2002</td>
@@ -368,10 +293,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>03 May 2002</td>
-<td></td>
+<td sorttable_customkey="20020503">03-05-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/26 - Cel Damage.xhtml';">
 <td>Cel Damage</td>
@@ -379,10 +301,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>03 May 2002</td>
-<td></td>
+<td sorttable_customkey="20020503">03-05-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/27 - Sonic Adventure 2 Battle.xhtml';">
 <td>Sonic Adventure 2 Battle</td>
@@ -390,10 +309,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>03 May 2002</td>
-<td></td>
+<td sorttable_customkey="20020503">03-05-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/28 - Super Monkey Ball.xhtml';">
 <td>Super Monkey Ball</td>
@@ -401,10 +317,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>03 May 2002</td>
-<td></td>
+<td sorttable_customkey="20020503">03-05-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/29 - NHL Hitz 2002.xhtml';">
 <td>NHL Hitz 20-02</td>
@@ -412,10 +325,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>10 May 2002</td>
-<td></td>
+<td sorttable_customkey="20020510">10-05-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/30 - The Simpsons Road Rage.xhtml';">
 <td>The Simpsons Road Rage</td>
@@ -423,10 +333,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>17 May 2002</td>
-<td></td>
+<td sorttable_customkey="20020517">17-05-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/31 - Super Smash Bros Melee.xhtml';">
 <td>Super Smash Bros. Melee</td>
@@ -434,10 +341,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>24 May 2002</td>
-<td></td>
+<td sorttable_customkey="20020524">24-05-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/32 - Dark Summit.xhtml';">
 <td>Dark Summit</td>
@@ -445,10 +349,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>24 May 2002</td>
-<td></td>
+<td sorttable_customkey="20020524">24-05-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/33 - Virtua Striker 3 Ver2002.xhtml';">
 <td>Virtua Striker 3 Ver.2002</td>
@@ -456,10 +357,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>24 May 2002</td>
-<td></td>
+<td sorttable_customkey="20020524">24-05-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/34 - NBA Courtside 2002.xhtml';">
 <td>NBA Courtside 2002</td>
@@ -467,10 +365,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>24 May 2002</td>
-<td></td>
+<td sorttable_customkey="20020524">24-05-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/35 - Eighteen Wheeler American Pro Trucker.xhtml';">
 <td>Eighteen Wheeler: American Pro Trucker</td>
@@ -478,10 +373,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>31 May 2002</td>
-<td></td>
+<td sorttable_customkey="20020531">31-05-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/36 - SpiderMan.xhtml';">
 <td>Spider-Man</td>
@@ -489,10 +381,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>07 June 2002</td>
-<td></td>
+<td sorttable_customkey="20020607">07-06-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/37 - Legends of Wrestling.xhtml';">
 <td>Legends of Wrestling</td>
@@ -500,10 +389,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>07 June 2002</td>
-<td></td>
+<td sorttable_customkey="20020607">07-06-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/38 - Jeremy McGrath Supercross World.xhtml';">
 <td>Jeremy McGrath Supercross World</td>
@@ -511,10 +397,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>07 June 2002</td>
-<td></td>
+<td sorttable_customkey="20020607">07-06-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/39 - James Bond 007 Agent Under Fire.xhtml';">
 <td>James Bond 007: Agent Under Fire</td>
@@ -522,10 +405,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>14 June 2002</td>
-<td></td>
+<td sorttable_customkey="20020614">14-06-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/40 - Spy Hunter.xhtml';">
 <td>Spy Hunter</td>
@@ -533,10 +413,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>28 June 2002</td>
-<td></td>
+<td sorttable_customkey="20020628">28-06-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/41 - RedCard.xhtml';">
 <td>RedCard</td>
@@ -544,10 +421,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>05 July 2002</td>
-<td></td>
+<td sorttable_customkey="20020705">05-07-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/42 - SSX Tricky.xhtml';">
 <td>SSX Tricky</td>
@@ -555,10 +429,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>12 July 2002</td>
-<td></td>
+<td sorttable_customkey="20020712">12-07-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/43 - F1 2002.xhtml';">
 <td>F1 2002</td>
@@ -566,10 +437,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>19 July 2002</td>
-<td></td>
+<td sorttable_customkey="20020719">19-07-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/44 - Gauntlet Dark Legacy.xhtml';">
 <td>Gauntlet: Dark Legacy</td>
@@ -577,10 +445,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>19 July 2002</td>
-<td></td>
+<td sorttable_customkey="20020719">19-07-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/45 - Lost Kingdoms.xhtml';">
 <td>Lost Kingdoms</td>
@@ -588,10 +453,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>09 August 2002</td>
-<td></td>
+<td sorttable_customkey="20020809">09-08-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/46 - Capcom vs SNK 2 EO.xhtml';">
 <td>Capcom vs. SNK 2 EO</td>
@@ -599,10 +461,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>30 August 2002</td>
-<td></td>
+<td sorttable_customkey="20020830">30-08-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/47 - ZooCube.xhtml';">
 <td>ZooCube</td>
@@ -610,10 +469,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>30 August 2002</td>
-<td></td>
+<td sorttable_customkey="20020830">30-08-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/48 - Aggressive Inline.xhtml';">
 <td>Aggressive Inline</td>
@@ -621,10 +477,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>06 September 2002</td>
-<td></td>
+<td sorttable_customkey="20020906">06-09-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/49 - Disneys Magical Mirror Starring Mickey Mouse.xhtml';">
 <td>Disney's Magical Mirror Starring Mickey Mouse</td>
@@ -632,10 +485,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>13 September 2002</td>
-<td></td>
+<td sorttable_customkey="20020913">13-09-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/50 - Resident Evil.xhtml';">
 <td>Resident Evil</td>
@@ -643,10 +493,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>13 September 2002</td>
-<td></td>
+<td sorttable_customkey="20020913">13-09-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/51 - WTA Tour Tennis.xhtml';">
 <td>WTA Tour Tennis</td>
@@ -654,10 +501,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>13 September 2002</td>
-<td></td>
+<td sorttable_customkey="20020913">13-09-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/52 - Worms Blast.xhtml';">
 <td>Worms Blast</td>
@@ -665,10 +509,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>13 September 2002</td>
-<td></td>
+<td sorttable_customkey="20020913">13-09-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/53 - UFC Throwdown.xhtml';">
 <td>UFC: Throwdown</td>
@@ -676,10 +517,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>20 September 2002</td>
-<td></td>
+<td sorttable_customkey="20020920">20-09-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/54 - Doshin the Giant.xhtml';">
 <td>Doshin the Giant</td>
@@ -687,10 +525,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>20 September 2002</td>
-<td></td>
+<td sorttable_customkey="20020920">20-09-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/55 - Freekstyle.xhtml';">
 <td>Freekstyle</td>
@@ -698,10 +533,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>20 September 2002</td>
-<td></td>
+<td sorttable_customkey="20020920">20-09-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/56 - Tetris Worlds.xhtml';">
 <td>Tetris Worlds</td>
@@ -709,10 +541,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>27 September 2002</td>
-<td></td>
+<td sorttable_customkey="20020927">27-09-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/57 - Beach Spikers.xhtml';">
 <td>Beach Spikers</td>
@@ -720,10 +549,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>27 September 2002</td>
-<td></td>
+<td sorttable_customkey="20020927">27-09-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/58 - WWE WrestleMania X8.xhtml';">
 <td>WWE WrestleMania X8</td>
@@ -731,10 +557,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>27 September 2002</td>
-<td></td>
+<td sorttable_customkey="20020927">27-09-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/59 - Turok Evolution.xhtml';">
 <td>Turok: Evolution</td>
@@ -742,10 +565,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>27 September 2002</td>
-<td></td>
+<td sorttable_customkey="20020927">27-09-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/60 - Largo Winch Empire Under Threat.xhtml';">
 <td>Largo Winch: Empire Under Threat</td>
@@ -753,10 +573,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>01 October 2002</td>
-<td></td>
+<td sorttable_customkey="20021001">01-10-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/61 - MX Superfly.xhtml';">
 <td>MX Superfly</td>
@@ -764,10 +581,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>04 October 2002</td>
-<td></td>
+<td sorttable_customkey="20021004">04-10-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/62 - Super Mario Sunshine.xhtml';">
 <td>Super Mario Sunshine</td>
@@ -775,10 +589,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>04 October 2002</td>
-<td></td>
+<td sorttable_customkey="20021004">04-10-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/63 - Pro Rally 2002.xhtml';">
 <td>Pro Rally 2002</td>
@@ -786,10 +597,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>04 October 2002</td>
-<td></td>
+<td sorttable_customkey="20021004">04-10-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/64 - Taz Wanted.xhtml';">
 <td>Taz Wanted</td>
@@ -797,10 +605,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>04 October 2002</td>
-<td></td>
+<td sorttable_customkey="20021004">04-10-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/65 - Namco Museum.xhtml';">
 <td>Namco Museum</td>
@@ -808,10 +613,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>09 October 2002</td>
-<td></td>
+<td sorttable_customkey="20021009">09-10-2002</td>
 <td>NTSC</td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/66 - Madden NFL 2003.xhtml';">
 <td>Madden NFL 2003</td>
@@ -819,10 +621,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>11 October 2002</td>
-<td></td>
+<td sorttable_customkey="20021011">11-10-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/67 - Smugglers Run Warzones.xhtml';">
 <td>Smuggler's Run: Warzones</td>
@@ -830,10 +629,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>18 October 2002</td>
-<td></td>
+<td sorttable_customkey="20021018">18-10-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/68 - Sega Soccer Slam.xhtml';">
 <td>Sega Soccer Slam</td>
@@ -841,10 +637,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>18 October 2002</td>
-<td></td>
+<td sorttable_customkey="20021018">18-10-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/69 - Kelly Slaters Pro Surfer.xhtml';">
 <td>Kelly Slater's Pro Surfer</td>
@@ -852,10 +645,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>18 October 2002</td>
-<td></td>
+<td sorttable_customkey="20021018">18-10-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/70 - Speed Challenge Jacques Villeneuves Racing Vision.xhtml';">
 <td>Speed Challenge: Jacques Villeneuve's Racing Vision</td>
@@ -863,10 +653,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>18 October 2002</td>
-<td></td>
+<td sorttable_customkey="20021018">18-10-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/71 - Need for Speed Hot Pursuit 2.xhtml';">
 <td>Need for Speed: Hot Pursuit 2</td>
@@ -874,10 +661,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>25 October 2002</td>
-<td></td>
+<td sorttable_customkey="20021025">25-10-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/72 - NHL 2003.xhtml';">
 <td>NHL 2003</td>
@@ -885,10 +669,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>25 October 2002</td>
-<td></td>
+<td sorttable_customkey="20021025">25-10-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/73 - Egg Mania Eggstreme Madness.xhtml';">
 <td>Egg Mania: Eggstreme Madness</td>
@@ -896,10 +677,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>25 October 2002</td>
-<td></td>
+<td sorttable_customkey="20021025">25-10-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/74 - Eternal Darkness Sanitys Requiem.xhtml';">
 <td>Eternal Darkness: Sanity's Requiem</td>
@@ -907,10 +685,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>01 November 2002</td>
-<td></td>
+<td sorttable_customkey="20021101">01-11-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/75 - NHL Hitz 2003.xhtml';">
 <td>NHL Hitz 20-03</td>
@@ -918,10 +693,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>01 November 2002</td>
-<td></td>
+<td sorttable_customkey="20021101">01-11-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/76 - Crash Bandicoot The Wrath of Cortex.xhtml';">
 <td>Crash Bandicoot: The Wrath of Cortex</td>
@@ -929,10 +701,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>01 November 2002</td>
-<td></td>
+<td sorttable_customkey="20021101">01-11-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/77 - FIFA Football 2003.xhtml';">
 <td>FIFA Football 2003</td>
@@ -940,10 +709,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>01 November 2002</td>
-<td></td>
+<td sorttable_customkey="20021101">01-11-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/78 - TimeSplitters 2.xhtml';">
 <td>TimeSplitters 2</td>
@@ -951,10 +717,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>01 November 2002</td>
-<td></td>
+<td sorttable_customkey="20021101">01-11-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/79 - Big Air Freestyle.xhtml';">
 <td>Big Air Freestyle</td>
@@ -962,10 +725,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>08 November 2002</td>
-<td></td>
+<td sorttable_customkey="20021108">08-11-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/80 - Top Gun Combat Zones.xhtml';">
 <td>Top Gun: Combat Zones</td>
@@ -973,10 +733,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>08 November 2002</td>
-<td></td>
+<td sorttable_customkey="20021108">08-11-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/81 - Godzilla Destroy All Monsters Melee.xhtml';">
 <td>Godzilla: Destroy All Monsters Melee</td>
@@ -984,10 +741,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>15 November 2002</td>
-<td></td>
+<td sorttable_customkey="20021115">15-11-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/82 - Star Wars The Clone Wars.xhtml';">
 <td>Star Wars: The Clone Wars</td>
@@ -995,10 +749,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>15 November 2002</td>
-<td></td>
+<td sorttable_customkey="20021115">15-11-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/83 - Tony Hawks Pro Skater 4.xhtml';">
 <td>Tony Hawk's Pro Skater 4</td>
@@ -1006,10 +757,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>15 November 2002</td>
-<td></td>
+<td sorttable_customkey="20021115">15-11-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/84 - Harry Potter and the Chamber of Secrets.xhtml';">
 <td>Harry Potter and the Chamber of Secrets</td>
@@ -1017,10 +765,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>15 November 2002</td>
-<td></td>
+<td sorttable_customkey="20021115">15-11-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/85 - Die Hard Vendetta.xhtml';">
 <td>Die Hard: Vendetta</td>
@@ -1028,10 +773,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>19 November 2002</td>
-<td></td>
+<td sorttable_customkey="20021119">19-11-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/86 - Star Fox Adventures.xhtml';">
 <td>Star Fox Adventures</td>
@@ -1039,10 +781,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>22 November 2002</td>
-<td></td>
+<td sorttable_customkey="20021122">22-11-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/87 - Ty the Tasmanian Tiger.xhtml';">
 <td>Ty the Tasmanian Tiger</td>
@@ -1050,10 +789,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>22 November 2002</td>
-<td></td>
+<td sorttable_customkey="20021122">22-11-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/88 - ScoobyDoo Night of 100 Frights.xhtml';">
 <td>Scooby-Doo! Night of 100 Frights</td>
@@ -1061,10 +797,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>22 November 2002</td>
-<td></td>
+<td sorttable_customkey="20021122">22-11-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/89 - Rocky.xhtml';">
 <td>Rocky</td>
@@ -1072,10 +805,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>22 November 2002</td>
-<td></td>
+<td sorttable_customkey="20021122">22-11-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/90 - Wreckless The Yakuza Missions.xhtml';">
 <td>Wreckless: The Yakuza Missions</td>
@@ -1083,10 +813,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>22 November 2002</td>
-<td></td>
+<td sorttable_customkey="20021122">22-11-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/91 - Jedi Knight II Jedi Outcast.xhtml';">
 <td>Jedi Knight II: Jedi Outcast</td>
@@ -1094,10 +821,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>22 November 2002</td>
-<td></td>
+<td sorttable_customkey="20021122">22-11-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/92 - Reign of Fire.xhtml';">
 <td>Reign of Fire</td>
@@ -1105,10 +829,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>29 November 2002</td>
-<td></td>
+<td sorttable_customkey="20021129">29-11-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/93 - The Scorpion King Rise of the Akkadian.xhtml';">
 <td>The Scorpion King: Rise of the Akkadian</td>
@@ -1116,10 +837,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>29 November 2002</td>
-<td></td>
+<td sorttable_customkey="20021129">29-11-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/94 - Spyro Enter the Dragonfly.xhtml';">
 <td>Spyro: Enter the Dragonfly</td>
@@ -1127,10 +845,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>29 November 2002</td>
-<td></td>
+<td sorttable_customkey="20021129">29-11-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/95 - Mario Party 4.xhtml';">
 <td>Mario Party 4</td>
@@ -1138,10 +853,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>29 November 2002</td>
-<td></td>
+<td sorttable_customkey="20021129">29-11-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/96 - XMen Next Dimension.xhtml';">
 <td>X-Men: Next Dimension</td>
@@ -1149,10 +861,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>29 November 2002</td>
-<td></td>
+<td sorttable_customkey="20021129">29-11-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/97 - James Bond 007 NightFire.xhtml';">
 <td>James Bond 007: NightFire</td>
@@ -1160,10 +869,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>29 November 2002</td>
-<td></td>
+<td sorttable_customkey="20021129">29-11-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/98 - Nickelodeon Party Blast.xhtml';">
 <td>Nickelodeon Party Blast</td>
@@ -1171,10 +877,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>06 December 2002</td>
-<td></td>
+<td sorttable_customkey="20021206">06-12-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/99 - Monster Jam Maximum Destruction.xhtml';">
 <td>Monster Jam: Maximum Destruction</td>
@@ -1182,10 +885,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>06 December 2002</td>
-<td></td>
+<td sorttable_customkey="20021206">06-12-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/100 - Bomberman Generation.xhtml';">
 <td>Bomberman Generation</td>
@@ -1193,10 +893,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>06 December 2002</td>
-<td></td>
+<td sorttable_customkey="20021206">06-12-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/101 - NBA Live 2003.xhtml';">
 <td>NBA Live 2003</td>
@@ -1204,10 +901,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>06 December 2002</td>
-<td></td>
+<td sorttable_customkey="20021206">06-12-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/102 - Mat Hoffmans Pro BMX 2.xhtml';">
 <td>Mat Hoffman's Pro BMX 2</td>
@@ -1215,10 +909,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>06 December 2002</td>
-<td></td>
+<td sorttable_customkey="20021206">06-12-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/103 - Medal of Honor Frontline.xhtml';">
 <td>Medal of Honor: Frontline</td>
@@ -1226,10 +917,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>06 December 2002</td>
-<td></td>
+<td sorttable_customkey="20021206">06-12-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/104 - Swingerz Golf.xhtml';">
 <td>Swingerz Golf</td>
@@ -1237,10 +925,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>06 December 2002</td>
-<td></td>
+<td sorttable_customkey="20021206">06-12-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/105 - Tiger Woods PGA Tour 2003.xhtml';">
 <td>Tiger Woods PGA Tour 2003</td>
@@ -1248,10 +933,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>06 December 2002</td>
-<td></td>
+<td sorttable_customkey="20021206">06-12-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/106 - Minority Report Everybody Runs.xhtml';">
 <td>Minority Report: Everybody Runs</td>
@@ -1259,10 +941,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>06 December 2002</td>
-<td></td>
+<td sorttable_customkey="20021206">06-12-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/107 - The Flintstones in Viva Rock Vegas.xhtml';">
 <td>The Flintstones in Viva Rock Vegas</td>
@@ -1270,10 +949,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>13 December 2002</td>
-<td></td>
+<td sorttable_customkey="20021213">13-12-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/108 - The Powerpuff Girls Relish Rampage.xhtml';">
 <td>The Powerpuff Girls: Relish Rampage</td>
@@ -1281,10 +957,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>13 December 2002</td>
-<td></td>
+<td sorttable_customkey="20021213">13-12-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/109 - Mystic Heroes.xhtml';">
 <td>Mystic Heroes</td>
@@ -1292,10 +965,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>13 December 2002</td>
-<td></td>
+<td sorttable_customkey="20021213">13-12-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/110 - Hot Wheels Velocity X.xhtml';">
 <td>Hot Wheels Velocity X</td>
@@ -1303,10 +973,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>13 December 2002</td>
-<td></td>
+<td sorttable_customkey="20021213">13-12-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/111 - Knockout Kings 2003.xhtml';">
 <td>Knockout Kings 2003</td>
@@ -1314,10 +981,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>20 December 2002</td>
-<td></td>
+<td sorttable_customkey="20021220">20-12-2002</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/112 - Micro Machines.xhtml';">
 <td>Micro Machines</td>
@@ -1325,10 +989,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>17 January 2003</td>
-<td></td>
+<td sorttable_customkey="20030117">17-01-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/113 - Blood Omen 2.xhtml';">
 <td>Blood Omen 2</td>
@@ -1336,10 +997,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>24 January 2003</td>
-<td></td>
+<td sorttable_customkey="20030124">24-01-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/114 - Star Wars Bounty Hunter.xhtml';">
 <td>Star Wars Bounty Hunter</td>
@@ -1347,10 +1005,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>07 February 2003</td>
-<td></td>
+<td sorttable_customkey="20030207">07-02-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/115 - Men in Black II Alien Escape.xhtml';">
 <td>Men in Black II: Alien Escape</td>
@@ -1358,10 +1013,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>07 February 2003</td>
-<td></td>
+<td sorttable_customkey="20030207">07-02-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/116 - Rally Championship.xhtml';">
 <td>Rally Championship</td>
@@ -1369,10 +1021,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>07 February 2003</td>
-<td></td>
+<td sorttable_customkey="20030207">07-02-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/117 - Disney Sports Soccer.xhtml';">
 <td>Disney Sports Soccer</td>
@@ -1380,10 +1029,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>07 February 2003</td>
-<td></td>
+<td sorttable_customkey="20030207">07-02-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/118 - BMX XXX.xhtml';">
 <td>BMX XXX</td>
@@ -1391,10 +1037,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>07 February 2003</td>
-<td></td>
+<td sorttable_customkey="20030207">07-02-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/119 - Legends of Wrestling II.xhtml';">
 <td>Legends of Wrestling II</td>
@@ -1402,10 +1045,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>07 February 2003</td>
-<td></td>
+<td sorttable_customkey="20030207">07-02-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/120 - MaryKate and Ashley Sweet 16.xhtml';">
 <td>Mary-Kate and Ashley: Sweet 16</td>
@@ -1413,21 +1053,15 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
+<td sorttable_customkey="20030214">14-02-2003</td>
 <td></td>
-<td></td>
-<td>14 February 2003</td>
-<td></td>
-<td>Kan geen PAL release date vinden</td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/121 - Casper Spirit Dimensions.xhtml';">
 <td>Casper: Spirit Dimensions</td>
 <td>Gamecube</td>
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>14 February 2003</td>
-<td></td>
+<td sorttable_customkey="20030214">14-02-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/122 - Mortal Kombat Deadly Alliance.xhtml';">
 <td>Mortal Kombat: Deadly Alliance</td>
@@ -1435,10 +1069,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>14 February 2003</td>
-<td></td>
+<td sorttable_customkey="20030214">14-02-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/123 - Rayman 3 Hoodlum Havoc.xhtml';">
 <td>Rayman 3: Hoodlum Havoc</td>
@@ -1446,10 +1077,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>21 February 2003</td>
-<td></td>
+<td sorttable_customkey="20030221">21-02-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/124 - Evolution Skateboarding.xhtml';">
 <td>Evolution Skateboarding</td>
@@ -1457,10 +1085,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>21 February 2003</td>
-<td></td>
+<td sorttable_customkey="20030221">21-02-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/125 - ATV Quad Power Racing 2.xhtml';">
 <td>ATV Quad Power Racing 2</td>
@@ -1468,10 +1093,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>28 February 2003</td>
-<td></td>
+<td sorttable_customkey="20030228">28-02-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/126 - Jimmy Neutron Boy Genius.xhtml';">
 <td>Jimmy Neutron Boy Genius</td>
@@ -1479,10 +1101,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>07 March 2003</td>
-<td></td>
+<td sorttable_customkey="20030307">07-03-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/127 - Disney Sports Skateboarding.xhtml';">
 <td>Disney Sports Skateboarding</td>
@@ -1490,10 +1109,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>07 March 2003</td>
-<td></td>
+<td sorttable_customkey="20030307">07-03-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/128 - Phantasy Star Online Episode I  II.xhtml';">
 <td>Phantasy Star Online Episode I & II</td>
@@ -1501,10 +1117,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>07 March 2003</td>
-<td></td>
+<td sorttable_customkey="20030307">07-03-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/129 - Resident Evil Zero.xhtml';">
 <td>Resident Evil Zero</td>
@@ -1512,10 +1125,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>07 March 2003</td>
-<td></td>
+<td sorttable_customkey="20030307">07-03-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/130 - Sonic Mega Collection.xhtml';">
 <td>Sonic Mega Collection</td>
@@ -1523,10 +1133,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>07 March 2003</td>
-<td></td>
+<td sorttable_customkey="20030307">07-03-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/131 - The Lord of the Rings The Two Towers.xhtml';">
 <td>The Lord of the Rings: The Two Towers</td>
@@ -1534,10 +1141,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>14 March 2003</td>
-<td></td>
+<td sorttable_customkey="20030314">14-03-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/132 - Super Monkey Ball 2.xhtml';">
 <td>Super Monkey Ball 2</td>
@@ -1545,10 +1149,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>14 March 2003</td>
-<td></td>
+<td sorttable_customkey="20030314">14-03-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/133 - Defender.xhtml';">
 <td>Defender</td>
@@ -1556,10 +1157,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>14 March 2003</td>
-<td></td>
+<td sorttable_customkey="20030314">14-03-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/134 - Zapper.xhtml';">
 <td>Zapper</td>
@@ -1567,10 +1165,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>14 March 2003</td>
-<td></td>
+<td sorttable_customkey="20030314">14-03-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/135 - The Sum of All Fears.xhtml';">
 <td>The Sum of All Fears</td>
@@ -1578,10 +1173,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>21 March 2003</td>
-<td></td>
+<td sorttable_customkey="20030321">21-03-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/136 - PacMan World 2.xhtml';">
 <td>Pac-Man World 2</td>
@@ -1589,10 +1181,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>21 March 2003</td>
-<td></td>
+<td sorttable_customkey="20030321">21-03-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/137 - Robotech Battlecry.xhtml';">
 <td>Robotech: Battlecry</td>
@@ -1600,10 +1189,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>21 March 2003</td>
-<td></td>
+<td sorttable_customkey="20030321">21-03-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/138 - Metroid Prime.xhtml';">
 <td>Metroid Prime</td>
@@ -1611,10 +1197,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>21 March 2003</td>
-<td></td>
+<td sorttable_customkey="20030321">21-03-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/139 - SpongeBob SquarePants Revenge of the Flying Dutchman.xhtml';">
 <td>SpongeBob SquarePants: Revenge of the Flying Dutchman</td>
@@ -1622,10 +1205,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>28 March 2003</td>
-<td></td>
+<td sorttable_customkey="20030328">28-03-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/140 - NHL 2K3.xhtml';">
 <td>NHL 2K3</td>
@@ -1633,10 +1213,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>28 March 2003</td>
-<td></td>
+<td sorttable_customkey="20030328">28-03-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/141 - Evolution Snowboarding.xhtml';">
 <td>Evolution Snowboarding</td>
@@ -1644,10 +1221,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>28 March 2003</td>
-<td></td>
+<td sorttable_customkey="20030328">28-03-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/142 - Tom Clancys Ghost Recon.xhtml';">
 <td>Tom Clancy's Ghost Recon</td>
@@ -1655,10 +1229,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>28 March 2003</td>
-<td></td>
+<td sorttable_customkey="20030328">28-03-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/143 - Dakar 2.xhtml';">
 <td>Dakar 2</td>
@@ -1666,10 +1237,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>28 March 2003</td>
-<td></td>
+<td sorttable_customkey="20030328">28-03-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/144 - NFL 2K3.xhtml';">
 <td>NFL 2K3</td>
@@ -1677,10 +1245,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>28 March 2003</td>
-<td></td>
+<td sorttable_customkey="20030328">28-03-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/145 - NBA 2K3.xhtml';">
 <td>NBA 2K3</td>
@@ -1688,10 +1253,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>28 March 2003</td>
-<td></td>
+<td sorttable_customkey="20030328">28-03-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/146 - Vexx.xhtml';">
 <td>Vexx</td>
@@ -1699,10 +1261,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>04 April 2003</td>
-<td></td>
+<td sorttable_customkey="20030404">04-04-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/147 - The Sims.xhtml';">
 <td>The Sims</td>
@@ -1710,10 +1269,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>04 April 2003</td>
-<td></td>
+<td sorttable_customkey="20030404">04-04-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/148 - Rugrats Royal Ransom.xhtml';">
 <td>Rugrats: Royal Ransom</td>
@@ -1721,10 +1277,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>11 April 2003</td>
-<td></td>
+<td sorttable_customkey="20030411">11-04-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/149 - Summoner A Goddess Reborn.xhtml';">
 <td>Summoner: A Goddess Reborn</td>
@@ -1732,10 +1285,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>11 April 2003</td>
-<td></td>
+<td sorttable_customkey="20030411">11-04-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/150 - Batman Dark Tomorrow.xhtml';">
 <td>Batman: Dark Tomorrow</td>
@@ -1743,10 +1293,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>11 April 2003</td>
-<td></td>
+<td sorttable_customkey="20030411">11-04-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/151 - Monsters Inc Scream Arena.xhtml';">
 <td>Monsters Inc. Scream Arena</td>
@@ -1754,10 +1301,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>11 April 2003</td>
-<td></td>
+<td sorttable_customkey="20030411">11-04-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/152 - X2 Wolverines Revenge.xhtml';">
 <td>X2: Wolverine's Revenge</td>
@@ -1765,10 +1309,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>17 April 2003</td>
-<td></td>
+<td sorttable_customkey="20030417">17-04-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/153 - Conflict Desert Storm.xhtml';">
 <td>Conflict: Desert Storm</td>
@@ -1776,10 +1317,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>17 April 2003</td>
-<td></td>
+<td sorttable_customkey="20030417">17-04-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/154 - Baldurs Gate Dark Alliance.xhtml';">
 <td>Baldur's Gate: Dark Alliance</td>
@@ -1787,10 +1325,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>25 April 2003</td>
-<td></td>
+<td sorttable_customkey="20030425">25-04-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/155 - NBA Street Vol 2.xhtml';">
 <td>NBA Street Vol. 2</td>
@@ -1798,10 +1333,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>02 May 2003</td>
-<td></td>
+<td sorttable_customkey="20030502">02-05-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/156 - The Legend of Zelda The Wind Waker.xhtml';">
 <td>The Legend of Zelda: The Wind Waker</td>
@@ -1809,10 +1341,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>02 May 2003</td>
-<td></td>
+<td sorttable_customkey="20030502">02-05-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/157 - Superman Shadow of Apokolips.xhtml';">
 <td>Superman: Shadow of Apokolips</td>
@@ -1820,10 +1349,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>02 May 2003</td>
-<td></td>
+<td sorttable_customkey="20030502">02-05-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/158 - The Legend of Zelda Ocarina of Time Master Quest.xhtml';">
 <td>The Legend of Zelda: Ocarina of Time Master Quest</td>
@@ -1831,10 +1357,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>03 May 2003</td>
-<td></td>
+<td sorttable_customkey="20030503">03-05-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/159 - Burnout 2 Point of Impact.xhtml';">
 <td>Burnout 2: Point of Impact</td>
@@ -1842,10 +1365,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>09 May 2003</td>
-<td></td>
+<td sorttable_customkey="20030509">09-05-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/160 - Butt Ugly Martians Zoom or Doom.xhtml';">
 <td>Butt Ugly Martians: Zoom or Doom</td>
@@ -1853,10 +1373,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>10 May 2003</td>
-<td></td>
+<td sorttable_customkey="20030510">10-05-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/161 - Enter the Matrix.xhtml';">
 <td>Enter the Matrix</td>
@@ -1864,10 +1381,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>15 May 2003</td>
-<td></td>
+<td sorttable_customkey="20030515">15-05-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/162 - WWE Crush Hour.xhtml';">
 <td>WWE Crush Hour</td>
@@ -1875,10 +1389,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>15 May 2003</td>
-<td></td>
+<td sorttable_customkey="20030515">15-05-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/163 - Ikaruga.xhtml';">
 <td>Ikaruga</td>
@@ -1886,10 +1397,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>23 May 2003</td>
-<td></td>
+<td sorttable_customkey="20030523">23-05-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/164 - Skies of Arcadia Legends.xhtml';">
 <td>Skies of Arcadia Legends</td>
@@ -1897,10 +1405,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>23 May 2003</td>
-<td></td>
+<td sorttable_customkey="20030523">23-05-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/165 - Def Jam Vendetta.xhtml';">
 <td>Def Jam Vendetta</td>
@@ -1908,10 +1413,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>23 May 2003</td>
-<td></td>
+<td sorttable_customkey="20030523">23-05-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/166 - BloodRayne.xhtml';">
 <td>BloodRayne</td>
@@ -1919,10 +1421,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>23 May 2003</td>
-<td></td>
+<td sorttable_customkey="20030523">23-05-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/167 - Shrek Super Party.xhtml';">
 <td>Shrek: Super Party</td>
@@ -1930,10 +1429,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>30 May 2003</td>
-<td></td>
+<td sorttable_customkey="20030530">30-05-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/168 - Castleween.xhtml';">
 <td>Castleween</td>
@@ -1941,10 +1437,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>30 May 2003</td>
-<td></td>
+<td sorttable_customkey="20030530">30-05-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/169 - International Superstar Soccer 3.xhtml';">
 <td>International Superstar Soccer 3</td>
@@ -1952,10 +1445,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>30 May 2003</td>
-<td></td>
+<td sorttable_customkey="20030530">30-05-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/170 - Resident Evil 3 Nemesis.xhtml';">
 <td>Resident Evil 3: Nemesis</td>
@@ -1963,10 +1453,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>30 May 2003</td>
-<td></td>
+<td sorttable_customkey="20030530">30-05-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/171 - Resident Evil 2.xhtml';">
 <td>Resident Evil 2</td>
@@ -1974,10 +1461,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>30 May 2003</td>
-<td></td>
+<td sorttable_customkey="20030530">30-05-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/172 - Darkened Skye.xhtml';">
 <td>Darkened Skye</td>
@@ -1985,10 +1469,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>30 May 2003</td>
-<td></td>
+<td sorttable_customkey="20030530">30-05-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/173 - Lost Kingdoms II.xhtml';">
 <td>Lost Kingdoms II</td>
@@ -1996,10 +1477,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>06 June 2003</td>
-<td></td>
+<td sorttable_customkey="20030606">06-06-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/174 - Red Faction II.xhtml';">
 <td>Red Faction II</td>
@@ -2007,10 +1485,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>06 June 2003</td>
-<td></td>
+<td sorttable_customkey="20030606">06-06-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/175 - Tom Clancys Splinter Cell.xhtml';">
 <td>Tom Clancy's Splinter Cell</td>
@@ -2018,10 +1493,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>06 June 2003</td>
-<td></td>
+<td sorttable_customkey="20030606">06-06-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/176 - Hulk.xhtml';">
 <td>Hulk</td>
@@ -2029,10 +1501,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>13 June 2003</td>
-<td></td>
+<td sorttable_customkey="20030613">13-06-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/177 - Wario World.xhtml';">
 <td>Wario World</td>
@@ -2040,10 +1509,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>20 June 2003</td>
-<td></td>
+<td sorttable_customkey="20030620">20-06-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/178 - Outlaw Golf.xhtml';">
 <td>Outlaw Golf</td>
@@ -2051,10 +1517,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>24 June 2003</td>
-<td></td>
+<td sorttable_customkey="20030624">24-06-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/179 - VRally 3.xhtml';">
 <td>V-Rally 3</td>
@@ -2062,10 +1525,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>25 June 2003</td>
-<td></td>
+<td sorttable_customkey="20030625">25-06-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/180 - Mega Man Network Transmission.xhtml';">
 <td>Mega Man Network Transmission</td>
@@ -2073,10 +1533,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>27 June 2003</td>
-<td></td>
+<td sorttable_customkey="20030627">27-06-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/181 - Hitman 2 Silent Assassin.xhtml';">
 <td>Hitman 2: Silent Assassin</td>
@@ -2084,10 +1541,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>27 June 2003</td>
-<td></td>
+<td sorttable_customkey="20030627">27-06-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/182 - Sonic Adventure DX Directors Cut.xhtml';">
 <td>Sonic Adventure DX: Director's Cut</td>
@@ -2095,10 +1549,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>27 June 2003</td>
-<td></td>
+<td sorttable_customkey="20030627">27-06-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/183 - F1 Career Challenge.xhtml';">
 <td>F1 Career Challenge</td>
@@ -2106,10 +1557,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>27 June 2003</td>
-<td></td>
+<td sorttable_customkey="20030627">27-06-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/184 - Frogger Beyond.xhtml';">
 <td>Frogger Beyond</td>
@@ -2117,10 +1565,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>27 June 2003</td>
-<td></td>
+<td sorttable_customkey="20030627">27-06-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/185 - Black  Bruised.xhtml';">
 <td>Black & Bruised</td>
@@ -2128,10 +1573,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>27 June 2003</td>
-<td></td>
+<td sorttable_customkey="20030627">27-06-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/186 - Piglets Big Game.xhtml';">
 <td>Piglet's Big Game</td>
@@ -2139,10 +1581,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>02 July 2003</td>
-<td></td>
+<td sorttable_customkey="20030702">02-07-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/187 - Speed Kings.xhtml';">
 <td>Speed Kings</td>
@@ -2150,10 +1589,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>04 July 2003</td>
-<td></td>
+<td sorttable_customkey="20030704">04-07-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/188 - SX Superstar.xhtml';">
 <td>SX Superstar</td>
@@ -2161,10 +1597,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>04 July 2003</td>
-<td></td>
+<td sorttable_customkey="20030704">04-07-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/189 - Hunter The Reckoning.xhtml';">
 <td>Hunter: The Reckoning</td>
@@ -2172,10 +1605,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>11 July 2003</td>
-<td></td>
+<td sorttable_customkey="20030711">11-07-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/190 - Charlies Angels.xhtml';">
 <td>Charlie's Angels</td>
@@ -2183,10 +1613,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>18 July 2003</td>
-<td></td>
+<td sorttable_customkey="20030718">18-07-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/191 - Disney Sports Basketball.xhtml';">
 <td>Disney Sports Basketball</td>
@@ -2194,10 +1621,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>08 August 2003</td>
-<td></td>
+<td sorttable_customkey="20030808">08-08-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/192 - Dead to Rights.xhtml';">
 <td>Dead to Rights</td>
@@ -2205,10 +1629,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>22 August 2003</td>
-<td></td>
+<td sorttable_customkey="20030822">22-08-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/193 - PN 03.xhtml';">
 <td>P.N. 03</td>
@@ -2216,10 +1637,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>29 August 2003</td>
-<td></td>
+<td sorttable_customkey="20030829">29-08-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/194 - Big Mutha Truckers.xhtml';">
 <td>Big Mutha Truckers</td>
@@ -2227,10 +1645,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>05 September 2003</td>
-<td></td>
+<td sorttable_customkey="20030905">05-09-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/195 - Disneys Extreme Skate Adventure.xhtml';">
 <td>Disney's Extreme Skate Adventure</td>
@@ -2238,10 +1653,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>05 September 2003</td>
-<td></td>
+<td sorttable_customkey="20030905">05-09-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/196 - BustaMove 3000.xhtml';">
 <td>Bust-a-Move 3000</td>
@@ -2249,10 +1661,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>05 September 2003</td>
-<td></td>
+<td sorttable_customkey="20030905">05-09-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/197 - Madden NFL 2004.xhtml';">
 <td>Madden NFL 2004</td>
@@ -2260,10 +1669,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>12 September 2003</td>
-<td></td>
+<td sorttable_customkey="20030912">12-09-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/198 - Freestyle MetalX.xhtml';">
 <td>Freestyle MetalX</td>
@@ -2271,10 +1677,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>12 September 2003</td>
-<td></td>
+<td sorttable_customkey="20030912">12-09-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/199 - The Italian Job.xhtml';">
 <td>The Italian Job</td>
@@ -2282,10 +1685,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>12 September 2003</td>
-<td></td>
+<td sorttable_customkey="20030912">12-09-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/200 - WWE WrestleMania XIX.xhtml';">
 <td>WWE WrestleMania XIX</td>
@@ -2293,10 +1693,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>19 September 2003</td>
-<td></td>
+<td sorttable_customkey="20030919">19-09-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/201 - Tiger Woods PGA Tour 2004.xhtml';">
 <td>Tiger Woods PGA Tour 2004</td>
@@ -2304,10 +1701,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>26 September 2003</td>
-<td></td>
+<td sorttable_customkey="20030926">26-09-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/202 - Freedom Fighters.xhtml';">
 <td>Freedom Fighters</td>
@@ -2315,10 +1709,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>26 September 2003</td>
-<td></td>
+<td sorttable_customkey="20030926">26-09-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/203 - Drome Racers.xhtml';">
 <td>Drome Racers</td>
@@ -2326,10 +1717,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>26 September 2003</td>
-<td></td>
+<td sorttable_customkey="20030926">26-09-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/204 - Finding Nemo.xhtml';">
 <td>Finding Nemo</td>
@@ -2337,10 +1725,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>26 September 2003</td>
-<td></td>
+<td sorttable_customkey="20030926">26-09-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/205 - Soul Calibur II.xhtml';">
 <td>Soul Calibur II</td>
@@ -2348,10 +1733,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>26 September 2003</td>
-<td></td>
+<td sorttable_customkey="20030926">26-09-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/206 - Wallace  Gromit in Project Zoo.xhtml';">
 <td>Wallace & Gromit in Project Zoo</td>
@@ -2359,10 +1741,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>03 October 2003</td>
-<td></td>
+<td sorttable_customkey="20031003">03-10-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/207 - NHL 2004.xhtml';">
 <td>NHL 2004</td>
@@ -2370,10 +1749,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>10 October 2003</td>
-<td></td>
+<td sorttable_customkey="20031010">10-10-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/208 - Disneys Party.xhtml';">
 <td>Disney's Party</td>
@@ -2381,10 +1757,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>17 October 2003</td>
-<td></td>
+<td sorttable_customkey="20031017">17-10-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/209 - FIFA Football 2004.xhtml';">
 <td>FIFA Football 2004</td>
@@ -2392,10 +1765,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>24 October 2003</td>
-<td></td>
+<td sorttable_customkey="20031024">24-10-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/210 - Buffy the Vampire Slayer Chaos Bleeds.xhtml';">
 <td>Buffy the Vampire Slayer: Chaos Bleeds</td>
@@ -2403,10 +1773,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>24 October 2003</td>
-<td></td>
+<td sorttable_customkey="20031024">24-10-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/211 - Viewtiful Joe.xhtml';">
 <td>Viewtiful Joe</td>
@@ -2414,10 +1781,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>24 October 2003</td>
-<td></td>
+<td sorttable_customkey="20031024">24-10-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/212 - Shrek Extra Large.xhtml';">
 <td>Shrek: Extra Large</td>
@@ -2425,10 +1789,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>24 October 2003</td>
-<td></td>
+<td sorttable_customkey="20031024">24-10-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/213 - SSX 3.xhtml';">
 <td>SSX 3</td>
@@ -2436,10 +1797,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>31 October 2003</td>
-<td></td>
+<td sorttable_customkey="20031031">31-10-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/214 - Bionicle The Game.xhtml';">
 <td>Bionicle: The Game</td>
@@ -2447,10 +1805,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>31 October 2003</td>
-<td></td>
+<td sorttable_customkey="20031031">31-10-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/215 - Billy Hatcher and the Giant Egg.xhtml';">
 <td>Billy Hatcher and the Giant Egg</td>
@@ -2458,10 +1813,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>31 October 2003</td>
-<td></td>
+<td sorttable_customkey="20031031">31-10-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/216 - The Simpsons Hit  Run.xhtml';">
 <td>The Simpsons: Hit & Run</td>
@@ -2469,10 +1821,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>31 October 2003</td>
-<td></td>
+<td sorttable_customkey="20031031">31-10-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/217 - FZero GX.xhtml';">
 <td>F-Zero GX</td>
@@ -2480,10 +1829,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>31 October 2003</td>
-<td></td>
+<td sorttable_customkey="20031031">31-10-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/218 - Worms 3D.xhtml';">
 <td>Worms 3D</td>
@@ -2491,10 +1837,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>31 October 2003</td>
-<td></td>
+<td sorttable_customkey="20031031">31-10-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/219 - The Fairly OddParents Breakin Da Rules.xhtml';">
 <td>The Fairly OddParents: Breakin' Da Rules</td>
@@ -2502,10 +1845,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>03 November 2003</td>
-<td></td>
+<td sorttable_customkey="20031103">03-11-2003</td>
 <td>NTSC</td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/220 - Harry Potter Quidditch World Cup.xhtml';">
 <td>Harry Potter: Quidditch World Cup</td>
@@ -2513,10 +1853,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>07 November 2003</td>
-<td></td>
+<td sorttable_customkey="20031107">07-11-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/221 - Star Wars Rogue Squadron III Rebel Strike.xhtml';">
 <td>Star Wars Rogue Squadron III: Rebel Strike</td>
@@ -2524,10 +1861,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>07 November 2003</td>
-<td></td>
+<td sorttable_customkey="20031107">07-11-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/222 - NBA Live 2004.xhtml';">
 <td>NBA Live 2004</td>
@@ -2535,10 +1869,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>07 November 2003</td>
-<td></td>
+<td sorttable_customkey="20031107">07-11-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/223 - Dragon Ball Z Budokai.xhtml';">
 <td>Dragon Ball Z: Budokai</td>
@@ -2546,10 +1877,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>14 November 2003</td>
-<td></td>
+<td sorttable_customkey="20031114">14-11-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/224 - The Legend of Zelda Collectors Edition.xhtml';">
 <td>The Legend of Zelda Collector's Edition</td>
@@ -2557,10 +1885,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>14 November 2003</td>
-<td></td>
+<td sorttable_customkey="20031114">14-11-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/225 - Mario Kart Double Dash.xhtml';">
 <td>Mario Kart: Double Dash!!</td>
@@ -2568,10 +1893,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>14 November 2003</td>
-<td></td>
+<td sorttable_customkey="20031114">14-11-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/226 - The Lord of the Rings The Return of the King.xhtml';">
 <td>The Lord of the Rings: The Return of the King</td>
@@ -2579,10 +1901,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>14 November 2003</td>
-<td></td>
+<td sorttable_customkey="20031114">14-11-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/227 - Tonka Rescue Patrol.xhtml';">
 <td>Tonka: Rescue Patrol</td>
@@ -2590,10 +1909,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>18 November 2003</td>
-<td></td>
+<td sorttable_customkey="20031118">18-11-2003</td>
 <td>NTSC</td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/228 - Tony Hawks Underground.xhtml';">
 <td>Tony Hawk's Underground</td>
@@ -2601,10 +1917,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>21 November 2003</td>
-<td></td>
+<td sorttable_customkey="20031121">21-11-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/229 - The Adventures of Jimmy Neutron Boy Genius Jet Fusion.xhtml';">
 <td>The Adventures of Jimmy Neutron Boy Genius: Jet Fusion</td>
@@ -2612,10 +1925,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>21 November 2003</td>
-<td></td>
+<td sorttable_customkey="20031121">21-11-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/230 - Need for Speed Underground.xhtml';">
 <td>Need for Speed Underground</td>
@@ -2623,10 +1933,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>21 November 2003</td>
-<td></td>
+<td sorttable_customkey="20031121">21-11-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/231 - True Crime Streets of LA.xhtml';">
 <td>True Crime: Streets of LA</td>
@@ -2634,10 +1941,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>21 November 2003</td>
-<td></td>
+<td sorttable_customkey="20031121">21-11-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/232 - BeyBlade Super Tournament Battle.xhtml';">
 <td>BeyBlade: Super Tournament Battle</td>
@@ -2645,21 +1949,15 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>28 November 2003</td>
-<td></td>
+<td sorttable_customkey="20031128">28-11-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/233 - 1080 Avalanche.xhtml';">
-<td>1080 Avalanche</td>
+<td>1080° Avalanche</td>
 <td>Gamecube</td>
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>28 November 2003</td>
-<td></td>
+<td sorttable_customkey="20031128">28-11-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/234 - XIII.xhtml';">
 <td>XIII</td>
@@ -2667,10 +1965,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>28 November 2003</td>
-<td></td>
+<td sorttable_customkey="20031128">28-11-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/235 - Gladius.xhtml';">
 <td>Gladius</td>
@@ -2678,10 +1973,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>28 November 2003</td>
-<td></td>
+<td sorttable_customkey="20031128">28-11-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/236 - Hot Wheels World Race.xhtml';">
 <td>Hot Wheels World Race</td>
@@ -2689,10 +1981,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>28 November 2003</td>
-<td></td>
+<td sorttable_customkey="20031128">28-11-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/237 - SpongeBob SquarePants Battle for Bikini Bottom.xhtml';">
 <td>SpongeBob SquarePants: Battle for Bikini Bottom</td>
@@ -2700,10 +1989,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>28 November 2003</td>
-<td></td>
+<td sorttable_customkey="20031128">28-11-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/238 - Crash Nitro Kart.xhtml';">
 <td>Crash Nitro Kart</td>
@@ -2711,10 +1997,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>28 November 2003</td>
-<td></td>
+<td sorttable_customkey="20031128">28-11-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/239 - The Hobbit.xhtml';">
 <td>The Hobbit</td>
@@ -2722,10 +2005,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>28 November 2003</td>
-<td></td>
+<td sorttable_customkey="20031128">28-11-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/240 - Medal of Honor Rising Sun.xhtml';">
 <td>Medal of Honor: Rising Sun</td>
@@ -2733,10 +2013,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>28 November 2003</td>
-<td></td>
+<td sorttable_customkey="20031128">28-11-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/241 - INinja.xhtml';">
 <td>I-Ninja</td>
@@ -2744,10 +2021,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>04 December 2003</td>
-<td></td>
+<td sorttable_customkey="20031204">04-12-2003</td>
 <td>NTSC</td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/242 - Gadget Racers.xhtml';">
 <td>Gadget Racers</td>
@@ -2755,10 +2029,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>05 December 2003</td>
-<td></td>
+<td sorttable_customkey="20031205">05-12-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/243 - Metal Arms Glitch in the System.xhtml';">
 <td>Metal Arms: Glitch in the System</td>
@@ -2766,10 +2037,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>05 December 2003</td>
-<td></td>
+<td sorttable_customkey="20031205">05-12-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/244 - Batman Rise of Sin Tzu.xhtml';">
 <td>Batman: Rise of Sin Tzu</td>
@@ -2777,10 +2045,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>05 December 2003</td>
-<td></td>
+<td sorttable_customkey="20031205">05-12-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/245 - Mario Party 5.xhtml';">
 <td>Mario Party 5</td>
@@ -2788,10 +2053,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>05 December 2003</td>
-<td></td>
+<td sorttable_customkey="20031205">05-12-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/246 - Harry Potter and the Philosophers Stone.xhtml';">
 <td>Harry Potter and the Philosopher's Stone</td>
@@ -2799,10 +2061,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>12 December 2003</td>
-<td></td>
+<td sorttable_customkey="20031212">12-12-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/247 - The Sims Bustin Out.xhtml';">
 <td>The Sims Bustin' Out</td>
@@ -2810,10 +2069,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>19 December 2003</td>
-<td></td>
+<td sorttable_customkey="20031219">19-12-2003</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/248 - Looney Tunes Back in Action.xhtml';">
 <td>Looney Tunes: Back in Action</td>
@@ -2821,10 +2077,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>30 January 2004</td>
-<td></td>
+<td sorttable_customkey="20040130">30-01-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/249 - NFL Street.xhtml';">
 <td>NFL Street</td>
@@ -2832,10 +2085,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>30 January 2004</td>
-<td></td>
+<td sorttable_customkey="20040130">30-01-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/250 - Rogue Ops.xhtml';">
 <td>Rogue Ops</td>
@@ -2843,10 +2093,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>06 February 2004</td>
-<td></td>
+<td sorttable_customkey="20040206">06-02-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/251 - Sonic Heroes.xhtml';">
 <td>Sonic Heroes</td>
@@ -2854,10 +2101,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>06 February 2004</td>
-<td></td>
+<td sorttable_customkey="20040206">06-02-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/252 - Conflict Desert Storm II  Back to Baghdad.xhtml';">
 <td>Conflict: Desert Storm II - Back to Baghdad</td>
@@ -2865,10 +2109,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>06 February 2004</td>
-<td></td>
+<td sorttable_customkey="20040206">06-02-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/253 - Top Angler.xhtml';">
 <td>Top Angler</td>
@@ -2876,10 +2117,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>13 February 2004</td>
-<td></td>
+<td sorttable_customkey="20040213">13-02-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/254 - Gotcha Force.xhtml';">
 <td>Gotcha Force</td>
@@ -2887,10 +2125,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>20 February 2004</td>
-<td></td>
+<td sorttable_customkey="20040220">20-02-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/255 - Prince of Persia The Sands of Time.xhtml';">
 <td>Prince of Persia: The Sands of Time</td>
@@ -2898,10 +2133,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>20 February 2004</td>
-<td></td>
+<td sorttable_customkey="20040220">20-02-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/256 - Sphinx and the Cursed Mummy.xhtml';">
 <td>Sphinx and the Cursed Mummy</td>
@@ -2909,10 +2141,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>20 February 2004</td>
-<td></td>
+<td sorttable_customkey="20040220">20-02-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/257 - Pitfall The Lost Expedition.xhtml';">
 <td>Pitfall: The Lost Expedition</td>
@@ -2920,10 +2149,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>20 February 2004</td>
-<td></td>
+<td sorttable_customkey="20040220">20-02-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/258 - Kirby Air Ride.xhtml';">
 <td>Kirby Air Ride</td>
@@ -2931,10 +2157,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>27 February 2004</td>
-<td></td>
+<td sorttable_customkey="20040227">27-02-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/259 - Beyond Good  Evil.xhtml';">
 <td>Beyond Good & Evil</td>
@@ -2942,10 +2165,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>27 February 2004</td>
-<td></td>
+<td sorttable_customkey="20040227">27-02-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/260 - Puyo Pop Fever.xhtml';">
 <td>Puyo Pop Fever</td>
@@ -2953,10 +2173,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>27 February 2004</td>
-<td></td>
+<td sorttable_customkey="20040227">27-02-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/261 - James Bond 007 Everything or Nothing.xhtml';">
 <td>James Bond 007: Everything or Nothing</td>
@@ -2964,10 +2181,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>27 February 2004</td>
-<td></td>
+<td sorttable_customkey="20040227">27-02-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/262 - The Haunted Mansion.xhtml';">
 <td>The Haunted Mansion</td>
@@ -2975,10 +2189,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>05 March 2004</td>
-<td></td>
+<td sorttable_customkey="20040305">05-03-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/263 - XGRA ExtremeG Racing Association.xhtml';">
 <td>XGRA: Extreme-G Racing Association</td>
@@ -2986,10 +2197,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>05 March 2004</td>
-<td></td>
+<td sorttable_customkey="20040305">05-03-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/264 - Freestyle Street Soccer.xhtml';">
 <td>Freestyle Street Soccer</td>
@@ -2997,10 +2205,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>05 March 2004</td>
-<td></td>
+<td sorttable_customkey="20040305">05-03-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/265 - Carmen Sandiego The Secret of the Stolen Drums.xhtml';">
 <td>Carmen Sandiego: The Secret of the Stolen Drums</td>
@@ -3008,10 +2213,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>05 March 2004</td>
-<td></td>
+<td sorttable_customkey="20040305">05-03-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/266 - Tak and the Power of Juju.xhtml';">
 <td>Tak and the Power of Juju</td>
@@ -3019,10 +2221,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>12 March 2004</td>
-<td></td>
+<td sorttable_customkey="20040312">12-03-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/267 - Final Fantasy Crystal Chronicles.xhtml';">
 <td>Final Fantasy Crystal Chronicles</td>
@@ -3030,10 +2229,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>12 March 2004</td>
-<td></td>
+<td sorttable_customkey="20040312">12-03-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/268 - Resident Evil Code Veronica X.xhtml';">
 <td>Resident Evil Code: Veronica X</td>
@@ -3041,10 +2237,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>12 March 2004</td>
-<td></td>
+<td sorttable_customkey="20040312">12-03-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/269 - Barbarian.xhtml';">
 <td>Barbarian</td>
@@ -3052,10 +2245,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>12 March 2004</td>
-<td></td>
+<td sorttable_customkey="20040312">12-03-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/270 - Spawn Armageddon.xhtml';">
 <td>Spawn: Armageddon</td>
@@ -3063,10 +2253,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>12 March 2004</td>
-<td></td>
+<td sorttable_customkey="20040312">12-03-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/271 - Pool Paradise.xhtml';">
 <td>Pool Paradise</td>
@@ -3074,10 +2261,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>15 March 2004</td>
-<td></td>
+<td sorttable_customkey="20040315">15-03-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/272 - MaxPlay Classic Games Volume 1.xhtml';">
 <td>MaxPlay Classic Games Volume 1</td>
@@ -3085,10 +2269,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>15 March 2004</td>
-<td></td>
+<td sorttable_customkey="20040315">15-03-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/273 - Disneys Hide and Sneak.xhtml';">
 <td>Disney's Hide and Sneak</td>
@@ -3096,10 +2277,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>19 March 2004</td>
-<td></td>
+<td sorttable_customkey="20040319">19-03-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/274 - Knights of the Temple.xhtml';">
 <td>Knights of the Temple</td>
@@ -3107,10 +2285,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>19 March 2004</td>
-<td></td>
+<td sorttable_customkey="20040319">19-03-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/275 - Harvest Moon A Wonderful Life.xhtml';">
 <td>Harvest Moon: A Wonderful Life</td>
@@ -3118,10 +2293,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>26 March 2004</td>
-<td></td>
+<td sorttable_customkey="20040326">26-03-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/276 - Dragons Lair 3D.xhtml';">
 <td>Dragon's Lair 3D</td>
@@ -3129,10 +2301,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>26 March 2004</td>
-<td></td>
+<td sorttable_customkey="20040326">26-03-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/277 - PacMan Vs.xhtml';">
 <td>Pac-Man Vs.</td>
@@ -3140,10 +2309,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>26 March 2004</td>
-<td></td>
+<td sorttable_customkey="20040326">26-03-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/278 - ScoobyDoo Mystery Mayhem.xhtml';">
 <td>Scooby-Doo! Mystery Mayhem</td>
@@ -3151,10 +2317,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>26 March 2004</td>
-<td></td>
+<td sorttable_customkey="20040326">26-03-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/279 - Metal Gear Solid The Twin Snakes.xhtml';">
 <td>Metal Gear Solid: The Twin Snakes</td>
@@ -3162,10 +2325,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>26 March 2004</td>
-<td></td>
+<td sorttable_customkey="20040326">26-03-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/280 - Pokémon Channel.xhtml';">
 <td>Pokémon Channel</td>
@@ -3173,10 +2333,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>02 April 2004</td>
-<td></td>
+<td sorttable_customkey="20040402">02-04-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/281 - Mission Impossible Operation Surma.xhtml';">
 <td>Mission Impossible: Operation Surma</td>
@@ -3184,10 +2341,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>02 April 2004</td>
-<td></td>
+<td sorttable_customkey="20040402">02-04-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/282 - R Racing Evolution.xhtml';">
 <td>R: Racing Evolution</td>
@@ -3195,10 +2349,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>02 April 2004</td>
-<td></td>
+<td sorttable_customkey="20040402">02-04-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/283 - Mercedes Benz World Racing.xhtml';">
 <td>Mercedes Benz World Racing</td>
@@ -3206,10 +2357,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>08 April 2004</td>
-<td></td>
+<td sorttable_customkey="20040408">08-04-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/284 - Space Raiders.xhtml';">
 <td>Space Raiders</td>
@@ -3217,10 +2365,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>19 April 2004</td>
-<td></td>
+<td sorttable_customkey="20040419">19-04-2004</td>
 <td>NTSC</td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/285 - Serious Sam Next Encounter.xhtml';">
 <td>Serious Sam: Next Encounter</td>
@@ -3228,10 +2373,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>30 April 2004</td>
-<td></td>
+<td sorttable_customkey="20040430">30-04-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/286 - Teenage Mutant Ninja Turtles.xhtml';">
 <td>Teenage Mutant Ninja Turtles</td>
@@ -3239,10 +2381,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>30 April 2004</td>
-<td></td>
+<td sorttable_customkey="20040430">30-04-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/287 - Pokémon Box Ruby  Sapphire.xhtml';">
 <td>Pokémon Box: Ruby & Sapphire</td>
@@ -3250,10 +2389,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>14 May 2004</td>
-<td></td>
+<td sorttable_customkey="20040514">14-05-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/288 - Pokémon Colosseum.xhtml';">
 <td>Pokémon Colosseum</td>
@@ -3261,10 +2397,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>14 May 2004</td>
-<td></td>
+<td sorttable_customkey="20040514">14-05-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/289 - Harry Potter and the Prisoner of Azkaban.xhtml';">
 <td>Harry Potter and the Prisoner of Azkaban</td>
@@ -3272,10 +2405,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>02 June 2004</td>
-<td></td>
+<td sorttable_customkey="20040602">02-06-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/290 - Phantasy Star Online Episode III CARD Revolution.xhtml';">
 <td>Phantasy Star Online Episode III C.A.R.D. Revolution</td>
@@ -3283,10 +2413,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>11 June 2004</td>
-<td></td>
+<td sorttable_customkey="20040611">11-06-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/291 - Mario Golf Toadstool Tour.xhtml';">
 <td>Mario Golf: Toadstool Tour</td>
@@ -3294,10 +2421,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>18 June 2004</td>
-<td></td>
+<td sorttable_customkey="20040618">18-06-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/292 - Asterix  Obelix XXL.xhtml';">
 <td>Asterix & Obelix XXL</td>
@@ -3305,10 +2429,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>18 June 2004</td>
-<td></td>
+<td sorttable_customkey="20040618">18-06-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/293 - Shrek 2.xhtml';">
 <td>Shrek 2</td>
@@ -3316,10 +2437,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>18 June 2004</td>
-<td></td>
+<td sorttable_customkey="20040618">18-06-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/294 - Tom Clancys Rainbow Six 3 Raven Shield.xhtml';">
 <td>Tom Clancy's Rainbow Six 3: Raven Shield</td>
@@ -3327,10 +2445,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>25 June 2004</td>
-<td></td>
+<td sorttable_customkey="20040625">25-06-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/295 - SpiderMan 2.xhtml';">
 <td>Spider-Man 2</td>
@@ -3338,10 +2453,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>09 July 2004</td>
-<td></td>
+<td sorttable_customkey="20040709">09-07-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/296 - Goblin Commander Unleash the Horde.xhtml';">
 <td>Goblin Commander: Unleash the Horde</td>
@@ -3349,10 +2461,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>16 July 2004</td>
-<td></td>
+<td sorttable_customkey="20040716">16-07-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/297 - Tom Clancys Splinter Cell Pandora Tomorrow.xhtml';">
 <td>Tom Clancy's Splinter Cell: Pandora Tomorrow</td>
@@ -3360,10 +2469,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>30 July 2004</td>
-<td></td>
+<td sorttable_customkey="20040730">30-07-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/298 - Catwoman.xhtml';">
 <td>Catwoman</td>
@@ -3371,10 +2477,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>06 August 2004</td>
-<td></td>
+<td sorttable_customkey="20040806">06-08-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/299 - Samurai Jack The Shadow of Aku.xhtml';">
 <td>Samurai Jack: The Shadow of Aku</td>
@@ -3382,10 +2485,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>06 August 2004</td>
-<td></td>
+<td sorttable_customkey="20040806">06-08-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/300 - Army Men Sarges War.xhtml';">
 <td>Army Men: Sarge's War</td>
@@ -3393,10 +2493,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>21 August 2004</td>
-<td></td>
+<td sorttable_customkey="20040821">21-08-2004</td>
 <td>NTSC</td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/301 - WarioWare Inc Mega Party Game.xhtml';">
 <td>WarioWare Inc.: Mega Party Game$</td>
@@ -3404,10 +2501,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>03 September 2004</td>
-<td></td>
+<td sorttable_customkey="20040903">03-09-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/302 - Second Sight.xhtml';">
 <td>Second Sight</td>
@@ -3415,10 +2509,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>03 September 2004</td>
-<td></td>
+<td sorttable_customkey="20040903">03-09-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/303 - Madden NFL 2005.xhtml';">
 <td>Madden NFL 2005</td>
@@ -3426,10 +2517,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>17 September 2004</td>
-<td></td>
+<td sorttable_customkey="20040917">17-09-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/304 - WWE Day of Reckoning.xhtml';">
 <td>WWE Day of Reckoning</td>
@@ -3437,10 +2525,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>17 September 2004</td>
-<td></td>
+<td sorttable_customkey="20040917">17-09-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/305 - Animal Crossing.xhtml';">
 <td>Animal Crossing</td>
@@ -3448,10 +2533,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>24 September 2004</td>
-<td></td>
+<td sorttable_customkey="20040924">24-09-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/306 - Tiger Woods PGA Tour 2005.xhtml';">
 <td>Tiger Woods PGA Tour 2005</td>
@@ -3459,10 +2541,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>24 September 2004</td>
-<td></td>
+<td sorttable_customkey="20040924">24-09-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/307 - Terminator 3 The Redemption.xhtml';">
 <td>Terminator 3: The Redemption</td>
@@ -3470,10 +2549,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>24 September 2004</td>
-<td></td>
+<td sorttable_customkey="20040924">24-09-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/308 - Medabots Infinity.xhtml';">
 <td>Medabots Infinity</td>
@@ -3481,10 +2557,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>24 September 2004</td>
-<td></td>
+<td sorttable_customkey="20040924">24-09-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/309 - Shark Tale.xhtml';">
 <td>Shark Tale</td>
@@ -3492,10 +2565,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>01 October 2004</td>
-<td></td>
+<td sorttable_customkey="20041001">01-10-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/310 - Def Jam Fight for NY.xhtml';">
 <td>Def Jam: Fight for NY</td>
@@ -3503,10 +2573,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>01 October 2004</td>
-<td></td>
+<td sorttable_customkey="20041001">01-10-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/311 - FIFA Football 2005.xhtml';">
 <td>FIFA Football 2005</td>
@@ -3514,10 +2581,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>08 October 2004</td>
-<td></td>
+<td sorttable_customkey="20041008">08-10-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/312 - Tony Hawks Underground 2.xhtml';">
 <td>Tony Hawk's Underground 2</td>
@@ -3525,10 +2589,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>08 October 2004</td>
-<td></td>
+<td sorttable_customkey="20041008">08-10-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/313 - NHL 2005.xhtml';">
 <td>NHL 2005</td>
@@ -3536,10 +2597,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>08 October 2004</td>
-<td></td>
+<td sorttable_customkey="20041008">08-10-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/314 - Pikmin 2.xhtml';">
 <td>Pikmin 2</td>
@@ -3547,10 +2605,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>08 October 2004</td>
-<td></td>
+<td sorttable_customkey="20041008">08-10-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/315 - Digimon Rumble Arena 2.xhtml';">
 <td>Digimon Rumble Arena 2</td>
@@ -3558,10 +2613,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>15 October 2004</td>
-<td></td>
+<td sorttable_customkey="20041015">15-10-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/316 - Bad Boys Miami Takedown.xhtml';">
 <td>Bad Boys: Miami Takedown</td>
@@ -3569,10 +2621,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>15 October 2004</td>
-<td></td>
+<td sorttable_customkey="20041015">15-10-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/317 - Donkey Konga.xhtml';">
 <td>Donkey Konga</td>
@@ -3580,10 +2629,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>15 October 2004</td>
-<td></td>
+<td sorttable_customkey="20041015">15-10-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/318 - XMen Legends.xhtml';">
 <td>X-Men Legends</td>
@@ -3591,10 +2637,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>22 October 2004</td>
-<td></td>
+<td sorttable_customkey="20041022">22-10-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/319 - Future Tactics The Uprising.xhtml';">
 <td>Future Tactics: The Uprising</td>
@@ -3602,10 +2645,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>22 October 2004</td>
-<td></td>
+<td sorttable_customkey="20041022">22-10-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/320 - Starsky  Hutch.xhtml';">
 <td>Starsky & Hutch</td>
@@ -3613,10 +2653,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>24 October 2004</td>
-<td></td>
+<td sorttable_customkey="20041024">24-10-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/321 - NBA Live 2005.xhtml';">
 <td>NBA Live 2005</td>
@@ -3624,10 +2661,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>29 October 2004</td>
-<td></td>
+<td sorttable_customkey="20041029">29-10-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/322 - Army Men RTS.xhtml';">
 <td>Army Men: RTS</td>
@@ -3635,10 +2669,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>02 November 2004</td>
-<td></td>
+<td sorttable_customkey="20041102">02-11-2004</td>
 <td>NTSC</td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/323 - Intellivision Lives.xhtml';">
 <td>Intellivision Lives!</td>
@@ -3646,10 +2677,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>04 November 2004</td>
-<td></td>
+<td sorttable_customkey="20041104">04-11-2004</td>
 <td>NTSC</td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/324 - Ty the Tasmanian Tiger 2 Bush Rescue.xhtml';">
 <td>Ty the Tasmanian Tiger 2: Bush Rescue</td>
@@ -3657,10 +2685,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>05 November 2004</td>
-<td></td>
+<td sorttable_customkey="20041105">05-11-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/325 - The Incredibles.xhtml';">
 <td>The Incredibles</td>
@@ -3668,10 +2693,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>05 November 2004</td>
-<td></td>
+<td sorttable_customkey="20041105">05-11-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/326 - The Lord of the Rings The Third Age.xhtml';">
 <td>The Lord of the Rings: The Third Age</td>
@@ -3679,10 +2701,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>05 November 2004</td>
-<td></td>
+<td sorttable_customkey="20041105">05-11-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/327 - The Urbz Sims in the City.xhtml';">
 <td>The Urbz: Sims in the City</td>
@@ -3690,10 +2709,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>12 November 2004</td>
-<td></td>
+<td sorttable_customkey="20041112">12-11-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/328 - Paper Mario The ThousandYear Door.xhtml';">
 <td>Paper Mario: The Thousand-Year Door</td>
@@ -3701,21 +2717,15 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
+<td sorttable_customkey="20041112">12-11-2004</td>
 <td></td>
-<td></td>
-<td>12 November 2004</td>
-<td></td>
-<td>Al uitgespeeld</td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/329 - Tales of Symphonia.xhtml';">
 <td>Tales of Symphonia</td>
 <td>Gamecube</td>
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>19 November 2004</td>
-<td></td>
+<td sorttable_customkey="20041119">19-11-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/330 - YuGiOh The Falsebound Kingdom.xhtml';">
 <td>Yu-Gi-Oh! The Falsebound Kingdom</td>
@@ -3723,10 +2733,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>19 November 2004</td>
-<td></td>
+<td sorttable_customkey="20041119">19-11-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/331 - Need for Speed Underground 2.xhtml';">
 <td>Need for Speed Underground 2</td>
@@ -3734,10 +2741,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>19 November 2004</td>
-<td></td>
+<td sorttable_customkey="20041119">19-11-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/332 - Mega Man X Command Mission.xhtml';">
 <td>Mega Man X: Command Mission</td>
@@ -3745,10 +2749,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>19 November 2004</td>
-<td></td>
+<td sorttable_customkey="20041119">19-11-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/333 - The Polar Express.xhtml';">
 <td>The Polar Express</td>
@@ -3756,10 +2757,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>22 November 2004</td>
-<td></td>
+<td sorttable_customkey="20041122">22-11-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/334 - Alien Hominid.xhtml';">
 <td>Alien Hominid</td>
@@ -3767,10 +2765,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>23 November 2004</td>
-<td></td>
+<td sorttable_customkey="20041123">23-11-2004</td>
 <td>NTSC</td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/335 - Lemony Snickets A Series of Unfortunate Events.xhtml';">
 <td>Lemony Snicket's A Series of Unfortunate Events</td>
@@ -3778,10 +2773,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>26 November 2004</td>
-<td></td>
+<td sorttable_customkey="20041126">26-11-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/336 - Metroid Prime 2 Echoes.xhtml';">
 <td>Metroid Prime 2: Echoes</td>
@@ -3789,10 +2781,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>26 November 2004</td>
-<td></td>
+<td sorttable_customkey="20041126">26-11-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/337 - Spyro A Heros Tail.xhtml';">
 <td>Spyro: A Hero's Tail</td>
@@ -3800,10 +2789,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>26 November 2004</td>
-<td></td>
+<td sorttable_customkey="20041126">26-11-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/338 - Call of Duty Finest Hour.xhtml';">
 <td>Call of Duty: Finest Hour</td>
@@ -3811,10 +2797,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>26 November 2004</td>
-<td></td>
+<td sorttable_customkey="20041126">26-11-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/339 - Power Rangers Dino Thunder.xhtml';">
 <td>Power Rangers Dino Thunder</td>
@@ -3822,10 +2805,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>26 November 2004</td>
-<td></td>
+<td sorttable_customkey="20041126">26-11-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/340 - Prince of Persia Warrior Within.xhtml';">
 <td>Prince of Persia: Warrior Within</td>
@@ -3833,10 +2813,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>03 December 2004</td>
-<td></td>
+<td sorttable_customkey="20041203">03-12-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/341 - GoldenEye Rogue Agent.xhtml';">
 <td>GoldenEye: Rogue Agent</td>
@@ -3844,10 +2821,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>03 December 2004</td>
-<td></td>
+<td sorttable_customkey="20041203">03-12-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/342 - Cocoto Platform Jumper.xhtml';">
 <td>Cocoto Platform Jumper</td>
@@ -3855,10 +2829,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>10 December 2004</td>
-<td></td>
+<td sorttable_customkey="20041210">10-12-2004</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/343 - The Legend of Zelda Four Swords Adventures.xhtml';">
 <td>The Legend of Zelda: Four Swords Adventures</td>
@@ -3866,10 +2837,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>07 January 2005</td>
-<td></td>
+<td sorttable_customkey="20050107">07-01-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/344 - Scaler.xhtml';">
 <td>Scaler</td>
@@ -3877,10 +2845,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>28 January 2005</td>
-<td></td>
+<td sorttable_customkey="20050128">28-01-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/345 - NFL Street 2.xhtml';">
 <td>NFL Street 2</td>
@@ -3888,10 +2853,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>28 January 2005</td>
-<td></td>
+<td sorttable_customkey="20050128">28-01-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/346 - Donkey Kong Jungle Beat.xhtml';">
 <td>Donkey Kong Jungle Beat</td>
@@ -3899,10 +2861,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>04 February 2005</td>
-<td></td>
+<td sorttable_customkey="20050204">04-02-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/347 - SpongeBob SquarePants The Movie.xhtml';">
 <td>SpongeBob SquarePants: The Movie</td>
@@ -3910,10 +2869,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>04 February 2005</td>
-<td></td>
+<td sorttable_customkey="20050204">04-02-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/348 - UEFA Champions League 20042005.xhtml';">
 <td>UEFA Champions League 2004-2005</td>
@@ -3921,10 +2877,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>04 February 2005</td>
-<td></td>
+<td sorttable_customkey="20050204">04-02-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/349 - King Arthur.xhtml';">
 <td>King Arthur</td>
@@ -3932,10 +2885,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>11 February 2005</td>
-<td></td>
+<td sorttable_customkey="20050211">11-02-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/350 - The Adventures of Jimmy Neutron Boy Genius Attack of the Twonkies.xhtml';">
 <td>The Adventures of Jimmy Neutron Boy Genius: Attack of the Twonkies</td>
@@ -3943,10 +2893,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>11 February 2005</td>
-<td></td>
+<td sorttable_customkey="20050211">11-02-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/351 - NBA Street V3.xhtml';">
 <td>NBA Street V3</td>
@@ -3954,10 +2901,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>18 February 2005</td>
-<td></td>
+<td sorttable_customkey="20050218">18-02-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/352 - Mario Power Tennis.xhtml';">
 <td>Mario Power Tennis</td>
@@ -3965,10 +2909,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>25 February 2005</td>
-<td></td>
+<td sorttable_customkey="20050225">25-02-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/353 - Judge Dredd Dredd Vs Death.xhtml';">
 <td>Judge Dredd: Dredd Vs. Death</td>
@@ -3976,10 +2917,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>01 March 2005</td>
-<td></td>
+<td sorttable_customkey="20050301">01-03-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/354 - Street Racing Syndicate.xhtml';">
 <td>Street Racing Syndicate</td>
@@ -3987,10 +2925,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>04 March 2005</td>
-<td></td>
+<td sorttable_customkey="20050304">04-03-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/355 - Neighbours from Hell.xhtml';">
 <td>Neighbours from Hell</td>
@@ -3998,10 +2933,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>04 March 2005</td>
-<td></td>
+<td sorttable_customkey="20050304">04-03-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/356 - Winnie the Poohs Rumbly Tumbly Adventure.xhtml';">
 <td>Winnie the Pooh's Rumbly Tumbly Adventure</td>
@@ -4009,10 +2941,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>08 March 2005</td>
-<td></td>
+<td sorttable_customkey="20050308">08-03-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/357 - Robots.xhtml';">
 <td>Robots</td>
@@ -4020,10 +2949,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>11 March 2005</td>
-<td></td>
+<td sorttable_customkey="20050311">11-03-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/358 - FIFA Street.xhtml';">
 <td>FIFA Street</td>
@@ -4031,10 +2957,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>11 March 2005</td>
-<td></td>
+<td sorttable_customkey="20050311">11-03-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/359 - World Championship Pool 2004.xhtml';">
 <td>World Championship Pool 2004</td>
@@ -4042,10 +2965,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>15 March 2005</td>
-<td></td>
+<td sorttable_customkey="20050315">15-03-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/360 - Dragon Ball Z Budokai 2.xhtml';">
 <td>Dragon Ball Z: Budokai 2</td>
@@ -4053,10 +2973,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>18 March 2005</td>
-<td></td>
+<td sorttable_customkey="20050318">18-03-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/361 - Mario Party 6.xhtml';">
 <td>Mario Party 6</td>
@@ -4064,10 +2981,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>18 March 2005</td>
-<td></td>
+<td sorttable_customkey="20050318">18-03-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/362 - Fight Night Round 2.xhtml';">
 <td>Fight Night Round 2</td>
@@ -4075,10 +2989,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>18 March 2005</td>
-<td></td>
+<td sorttable_customkey="20050318">18-03-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/363 - Resident Evil 4.xhtml';">
 <td>Resident Evil 4</td>
@@ -4086,10 +2997,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>18 March 2005</td>
-<td></td>
+<td sorttable_customkey="20050318">18-03-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/364 - Tak 2 The Staff of Dreams.xhtml';">
 <td>Tak 2: The Staff of Dreams</td>
@@ -4097,10 +3005,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>24 March 2005</td>
-<td></td>
+<td sorttable_customkey="20050324">24-03-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/365 - Tom Clancys Ghost Recon 2.xhtml';">
 <td>Tom Clancy's Ghost Recon 2</td>
@@ -4108,10 +3013,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>24 March 2005</td>
-<td></td>
+<td sorttable_customkey="20050324">24-03-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/366 - TimeSplitters Future Perfect.xhtml';">
 <td>TimeSplitters: Future Perfect</td>
@@ -4119,10 +3021,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>25 March 2005</td>
-<td></td>
+<td sorttable_customkey="20050325">25-03-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/367 - Viewtiful Joe 2.xhtml';">
 <td>Viewtiful Joe 2</td>
@@ -4130,10 +3029,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>01 April 2005</td>
-<td></td>
+<td sorttable_customkey="20050401">01-04-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/368 - Baten Kaitos Eternal Wings and the Lost Ocean.xhtml';">
 <td>Baten Kaitos: Eternal Wings and the Lost Ocean</td>
@@ -4141,10 +3037,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>01 April 2005</td>
-<td></td>
+<td sorttable_customkey="20050401">01-04-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/369 - Tom Clancys Splinter Cell Chaos Theory.xhtml';">
 <td>Tom Clancy's Splinter Cell: Chaos Theory</td>
@@ -4152,10 +3045,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>01 April 2005</td>
-<td></td>
+<td sorttable_customkey="20050401">01-04-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/370 - The Fairly OddParents Shadow Showdown.xhtml';">
 <td>The Fairly OddParents: Shadow Showdown</td>
@@ -4163,10 +3053,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>08 April 2005</td>
-<td></td>
+<td sorttable_customkey="20050408">08-04-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/371 - Kao the Kangaroo Round 2.xhtml';">
 <td>Kao the Kangaroo Round 2</td>
@@ -4174,10 +3061,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>15 April 2005</td>
-<td></td>
+<td sorttable_customkey="20050415">15-04-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/372 - Conan.xhtml';">
 <td>Conan</td>
@@ -4185,10 +3069,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>15 April 2005</td>
-<td></td>
+<td sorttable_customkey="20050415">15-04-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/373 - Cocoto Kart Racer.xhtml';">
 <td>Cocoto Kart Racer</td>
@@ -4196,10 +3077,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>22 April 2005</td>
-<td></td>
+<td sorttable_customkey="20050422">22-04-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/374 - Star Fox Assault.xhtml';">
 <td>Star Fox: Assault</td>
@@ -4207,10 +3085,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>29 April 2005</td>
-<td></td>
+<td sorttable_customkey="20050429">29-04-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/375 - Teenage Mutant Ninja Turtles 2 Battle Nexus.xhtml';">
 <td>Teenage Mutant Ninja Turtles 2: Battle Nexus</td>
@@ -4218,10 +3093,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>13 May 2005</td>
-<td></td>
+<td sorttable_customkey="20050513">13-05-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/376 - Animaniacs The Great Edgar Hunt.xhtml';">
 <td>Animaniacs: The Great Edgar Hunt</td>
@@ -4229,10 +3101,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>27 May 2005</td>
-<td></td>
+<td sorttable_customkey="20050527">27-05-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/377 - Donkey Konga 2.xhtml';">
 <td>Donkey Konga 2</td>
@@ -4240,10 +3109,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>03 June 2005</td>
-<td></td>
+<td sorttable_customkey="20050603">03-06-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/378 - Medal of Honor European Assault.xhtml';">
 <td>Medal of Honor: European Assault</td>
@@ -4251,10 +3117,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>17 June 2005</td>
-<td></td>
+<td sorttable_customkey="20050617">17-06-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/379 - Batman Begins.xhtml';">
 <td>Batman Begins</td>
@@ -4262,10 +3125,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>17 June 2005</td>
-<td></td>
+<td sorttable_customkey="20050617">17-06-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/380 - MC Groovz Dance Craze.xhtml';">
 <td>MC Groovz Dance Craze</td>
@@ -4273,10 +3133,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>23 June 2005</td>
-<td></td>
+<td sorttable_customkey="20050623">23-06-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/381 - Madagascar.xhtml';">
 <td>Madagascar</td>
@@ -4284,10 +3141,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>30 June 2005</td>
-<td></td>
+<td sorttable_customkey="20050630">30-06-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/382 - Fantastic Four.xhtml';">
 <td>Fantastic Four</td>
@@ -4295,10 +3149,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>15 July 2005</td>
-<td></td>
+<td sorttable_customkey="20050715">15-07-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/383 - Killer7.xhtml';">
 <td>Killer7</td>
@@ -4306,10 +3157,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>15 July 2005</td>
-<td></td>
+<td sorttable_customkey="20050715">15-07-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/384 - Charlie and the Chocolate Factory.xhtml';">
 <td>Charlie and the Chocolate Factory</td>
@@ -4317,10 +3165,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>22 July 2005</td>
-<td></td>
+<td sorttable_customkey="20050722">22-07-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/385 - Hello Kitty Roller Rescue.xhtml';">
 <td>Hello Kitty: Roller Rescue</td>
@@ -4328,10 +3173,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>09 September 2005</td>
-<td></td>
+<td sorttable_customkey="20050909">09-09-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/386 - The Incredible Hulk Ultimate Destruction.xhtml';">
 <td>The Incredible Hulk: Ultimate Destruction</td>
@@ -4339,10 +3181,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>09 September 2005</td>
-<td></td>
+<td sorttable_customkey="20050909">09-09-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/387 - Madden NFL 06.xhtml';">
 <td>Madden NFL 06</td>
@@ -4350,10 +3189,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>16 September 2005</td>
-<td></td>
+<td sorttable_customkey="20050916">16-09-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/388 - Tak The Great Juju Challenge.xhtml';">
 <td>Tak: The Great Juju Challenge</td>
@@ -4361,10 +3197,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>19 September 2005</td>
-<td></td>
+<td sorttable_customkey="20050919">19-09-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/389 - ScoobyDoo Unmasked.xhtml';">
 <td>Scooby-Doo! Unmasked</td>
@@ -4372,10 +3205,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>23 September 2005</td>
-<td></td>
+<td sorttable_customkey="20050923">23-09-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/390 - NHL 06.xhtml';">
 <td>NHL 06</td>
@@ -4383,10 +3213,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>23 September 2005</td>
-<td></td>
+<td sorttable_customkey="20050923">23-09-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/391 - WWE Day of Reckoning 2.xhtml';">
 <td>WWE Day of Reckoning 2</td>
@@ -4394,10 +3221,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>23 September 2005</td>
-<td></td>
+<td sorttable_customkey="20050923">23-09-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/392 - FIFA 06.xhtml';">
 <td>FIFA 06</td>
@@ -4405,10 +3229,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>30 September 2005</td>
-<td></td>
+<td sorttable_customkey="20050930">30-09-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/393 - Sonic Gems Collection.xhtml';">
 <td>Sonic Gems Collection</td>
@@ -4416,10 +3237,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>30 September 2005</td>
-<td></td>
+<td sorttable_customkey="20050930">30-09-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/394 - Tiger Woods PGA Tour 06.xhtml';">
 <td>Tiger Woods PGA Tour 06</td>
@@ -4427,10 +3245,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>07 October 2005</td>
-<td></td>
+<td sorttable_customkey="20051007">07-10-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/395 - NBA Live 06.xhtml';">
 <td>NBA Live 06</td>
@@ -4438,10 +3253,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>07 October 2005</td>
-<td></td>
+<td sorttable_customkey="20051007">07-10-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/396 - Tom Clancys Rainbow Six Lockdown.xhtml';">
 <td>Tom Clancy's Rainbow Six: Lockdown</td>
@@ -4449,10 +3261,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>07 October 2005</td>
-<td></td>
+<td sorttable_customkey="20051007">07-10-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/397 - Geist.xhtml';">
 <td>Geist</td>
@@ -4460,10 +3269,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>07 October 2005</td>
-<td></td>
+<td sorttable_customkey="20051007">07-10-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/398 - Spartan Total Warrior.xhtml';">
 <td>Spartan: Total Warrior</td>
@@ -4471,10 +3277,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>07 October 2005</td>
-<td></td>
+<td sorttable_customkey="20051007">07-10-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/399 - Ultimate SpiderMan.xhtml';">
 <td>Ultimate Spider-Man</td>
@@ -4482,10 +3285,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>14 October 2005</td>
-<td></td>
+<td sorttable_customkey="20051014">14-10-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/400 - XMen Legends II Rise of Apocalypse.xhtml';">
 <td>X-Men Legends II: Rise of Apocalypse</td>
@@ -4493,10 +3293,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>14 October 2005</td>
-<td></td>
+<td sorttable_customkey="20051014">14-10-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/401 - Marvel Nemesis Rise of the Imperfects.xhtml';">
 <td>Marvel Nemesis: Rise of the Imperfects</td>
@@ -4504,10 +3301,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>14 October 2005</td>
-<td></td>
+<td sorttable_customkey="20051014">14-10-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/402 - Bratz Rock Angelz.xhtml';">
 <td>Bratz: Rock Angelz</td>
@@ -4515,10 +3309,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>14 October 2005</td>
-<td></td>
+<td sorttable_customkey="20051014">14-10-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/403 - SSX On Tour.xhtml';">
 <td>SSX On Tour</td>
@@ -4526,10 +3317,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>21 October 2005</td>
-<td></td>
+<td sorttable_customkey="20051021">21-10-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/404 - Dance Dance Revolution Mario Mix.xhtml';">
 <td>Dance Dance Revolution: Mario Mix</td>
@@ -4537,10 +3325,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>28 October 2005</td>
-<td></td>
+<td sorttable_customkey="20051028">28-10-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/405 - Tony Hawks American Wasteland.xhtml';">
 <td>Tony Hawk's American Wasteland</td>
@@ -4548,10 +3333,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>28 October 2005</td>
-<td></td>
+<td sorttable_customkey="20051028">28-10-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/406 - Ed Edd n Eddy The MisEdventures.xhtml';">
 <td>Ed, Edd n Eddy: The Mis-Edventures</td>
@@ -4559,10 +3341,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>03 November 2005</td>
-<td></td>
+<td sorttable_customkey="20051103">03-11-2005</td>
 <td>NTSC</td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/407 - Fire Emblem Path of Radiance.xhtml';">
 <td>Fire Emblem: Path of Radiance</td>
@@ -4570,10 +3349,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>04 November 2005</td>
-<td></td>
+<td sorttable_customkey="20051104">04-11-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/408 - Lego Star Wars The Video Game.xhtml';">
 <td>Lego Star Wars: The Video Game</td>
@@ -4581,10 +3357,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>04 November 2005</td>
-<td></td>
+<td sorttable_customkey="20051104">04-11-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/409 - The Sims 2.xhtml';">
 <td>The Sims 2</td>
@@ -4592,10 +3365,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>04 November 2005</td>
-<td></td>
+<td sorttable_customkey="20051104">04-11-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/410 - Karaoke Revolution Party.xhtml';">
 <td>Karaoke Revolution Party</td>
@@ -4603,10 +3373,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>08 November 2005</td>
-<td></td>
+<td sorttable_customkey="20051108">08-11-2005</td>
 <td>NTSC</td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/411 - Mario Superstar Baseball.xhtml';">
 <td>Mario Superstar Baseball</td>
@@ -4614,10 +3381,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>11 November 2005</td>
-<td></td>
+<td sorttable_customkey="20051111">11-11-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/412 - Crash Tag Team Racing.xhtml';">
 <td>Crash Tag Team Racing</td>
@@ -4625,10 +3389,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>11 November 2005</td>
-<td></td>
+<td sorttable_customkey="20051111">11-11-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/413 - Harry Potter and the Goblet of Fire.xhtml';">
 <td>Harry Potter and the Goblet of Fire</td>
@@ -4636,10 +3397,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>11 November 2005</td>
-<td></td>
+<td sorttable_customkey="20051111">11-11-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/414 - Peter Jacksons King Kong The Official Game of the Movie.xhtml';">
 <td>Peter Jackson's King Kong: The Official Game of the Movie</td>
@@ -4647,10 +3405,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>17 November 2005</td>
-<td></td>
+<td sorttable_customkey="20051117">17-11-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/415 - Pokémon XD Gale of Darkness.xhtml';">
 <td>Pokémon XD: Gale of Darkness</td>
@@ -4658,10 +3413,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>18 November 2005</td>
-<td></td>
+<td sorttable_customkey="20051118">18-11-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/416 - SpongeBob SquarePants Lights Camera Pants.xhtml';">
 <td>SpongeBob SquarePants: Lights, Camera, Pants!</td>
@@ -4669,10 +3421,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>18 November 2005</td>
-<td></td>
+<td sorttable_customkey="20051118">18-11-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/417 - Super Mario Strikers.xhtml';">
 <td>Super Mario Strikers</td>
@@ -4680,10 +3429,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>18 November 2005</td>
-<td></td>
+<td sorttable_customkey="20051118">18-11-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/418 - Call of Duty 2 Big Red One.xhtml';">
 <td>Call of Duty 2: Big Red One</td>
@@ -4691,10 +3437,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>18 November 2005</td>
-<td></td>
+<td sorttable_customkey="20051118">18-11-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/419 - Shrek SuperSlam.xhtml';">
 <td>Shrek SuperSlam</td>
@@ -4702,10 +3445,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>18 November 2005</td>
-<td></td>
+<td sorttable_customkey="20051118">18-11-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/420 - From Russia With Love.xhtml';">
 <td>From Russia With Love</td>
@@ -4713,10 +3453,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>18 November 2005</td>
-<td></td>
+<td sorttable_customkey="20051118">18-11-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/421 - Shadow the Hedgehog.xhtml';">
 <td>Shadow the Hedgehog</td>
@@ -4724,10 +3461,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>18 November 2005</td>
-<td></td>
+<td sorttable_customkey="20051118">18-11-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/422 - True Crime New York City.xhtml';">
 <td>True Crime: New York City</td>
@@ -4735,10 +3469,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>25 November 2005</td>
-<td></td>
+<td sorttable_customkey="20051125">25-11-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/423 - The Incredibles Rise of the Underminer.xhtml';">
 <td>The Incredibles: Rise of the Underminer</td>
@@ -4746,10 +3477,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>25 November 2005</td>
-<td></td>
+<td sorttable_customkey="20051125">25-11-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/424 - GUN.xhtml';">
 <td>GUN</td>
@@ -4757,10 +3485,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>25 November 2005</td>
-<td></td>
+<td sorttable_customkey="20051125">25-11-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/425 - Need for Speed Most Wanted.xhtml';">
 <td>Need for Speed Most Wanted</td>
@@ -4768,10 +3493,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>25 November 2005</td>
-<td></td>
+<td sorttable_customkey="20051125">25-11-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/426 - American Chopper Full Throttle.xhtml';">
 <td>American Chopper Full Throttle</td>
@@ -4779,10 +3501,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>29 November 2005</td>
-<td></td>
+<td sorttable_customkey="20051129">29-11-2005</td>
 <td>NTSC</td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/427 - Codename Kids Next Door Operation VIDEOGAME.xhtml';">
 <td>Codename Kids Next Door Operation: V.I.D.E.O.G.A.M.E.</td>
@@ -4790,21 +3509,15 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
+<td sorttable_customkey="20051202">02-12-2005</td>
 <td></td>
-<td></td>
-<td>02 December 2005</td>
-<td></td>
-<td>Al uitgespeeld</td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/428 - Battalion Wars.xhtml';">
 <td>Battalion Wars</td>
 <td>Gamecube</td>
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>09 December 2005</td>
-<td></td>
+<td sorttable_customkey="20051209">09-12-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/429 - Prince of Persia The Two Thrones.xhtml';">
 <td>Prince of Persia: The Two Thrones</td>
@@ -4812,10 +3525,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>09 December 2005</td>
-<td></td>
+<td sorttable_customkey="20051209">09-12-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/430 - Dora the Explorer Journey to the Purple Planet.xhtml';">
 <td>Dora the Explorer: Journey to the Purple Planet</td>
@@ -4823,10 +3533,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>16 December 2005</td>
-<td></td>
+<td sorttable_customkey="20051216">16-12-2005</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/431 - Chicken Little.xhtml';">
 <td>Chicken Little</td>
@@ -4834,10 +3541,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>10 February 2006</td>
-<td></td>
+<td sorttable_customkey="20060210">10-02-2006</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/432 - Mario Party 7.xhtml';">
 <td>Mario Party 7</td>
@@ -4845,10 +3549,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>10 February 2006</td>
-<td></td>
+<td sorttable_customkey="20060210">10-02-2006</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/433 - FIFA Street 2.xhtml';">
 <td>FIFA Street 2</td>
@@ -4856,10 +3557,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>03 March 2006</td>
-<td></td>
+<td sorttable_customkey="20060303">03-03-2006</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/434 - Nicktoons Unite.xhtml';">
 <td>Nicktoons Unite!</td>
@@ -4867,10 +3565,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>03 March 2006</td>
-<td></td>
+<td sorttable_customkey="20060303">03-03-2006</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/435 - Naruto Clash of Ninja.xhtml';">
 <td>Naruto: Clash of Ninja</td>
@@ -4878,10 +3573,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>07 March 2006</td>
-<td></td>
+<td sorttable_customkey="20060307">07-03-2006</td>
 <td>NTSC</td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/436 - Viewtiful Joe Red Hot Rumble.xhtml';">
 <td>Viewtiful Joe: Red Hot Rumble</td>
@@ -4889,10 +3581,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>10 March 2006</td>
-<td></td>
+<td sorttable_customkey="20060310">10-03-2006</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/437 - Sea World Shamus Deep Sea Adventure.xhtml';">
 <td>Sea World: Shamu's Deep Sea Adventure</td>
@@ -4900,10 +3589,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>16 March 2006</td>
-<td></td>
+<td sorttable_customkey="20060316">16-03-2006</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/438 - Sonic Riders.xhtml';">
 <td>Sonic Riders</td>
@@ -4911,10 +3597,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>17 March 2006</td>
-<td></td>
+<td sorttable_customkey="20060317">17-03-2006</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/439 - Odama.xhtml';">
 <td>Odama</td>
@@ -4922,10 +3605,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>31 March 2006</td>
-<td></td>
+<td sorttable_customkey="20060331">31-03-2006</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/440 - Ice Age 2 The Meltdown.xhtml';">
 <td>Ice Age 2: The Meltdown</td>
@@ -4933,10 +3613,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>31 March 2006</td>
-<td></td>
+<td sorttable_customkey="20060331">31-03-2006</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/441 - The Chronicles of Narnia The Lion The Witch and The Wardrobe.xhtml';">
 <td>The Chronicles of Narnia: The Lion, The Witch and The Wardrobe</td>
@@ -4944,10 +3621,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>31 March 2006</td>
-<td></td>
+<td sorttable_customkey="20060331">31-03-2006</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/442 - Cocoto Funfair.xhtml';">
 <td>Cocoto Funfair</td>
@@ -4955,10 +3629,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>07 April 2006</td>
-<td></td>
+<td sorttable_customkey="20060407">07-04-2006</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/443 - Rampage Total Destruction.xhtml';">
 <td>Rampage: Total Destruction</td>
@@ -4966,10 +3637,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>28 April 2006</td>
-<td></td>
+<td sorttable_customkey="20060428">28-04-2006</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/444 - 2006 FIFA World Cup.xhtml';">
 <td>2006 FIFA World Cup</td>
@@ -4977,10 +3645,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>28 April 2006</td>
-<td></td>
+<td sorttable_customkey="20060428">28-04-2006</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/445 - Namco Museum 50th Anniversary.xhtml';">
 <td>Namco Museum 50th Anniversary</td>
@@ -4988,10 +3653,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>05 May 2006</td>
-<td></td>
+<td sorttable_customkey="20060505">05-05-2006</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/446 - XMen The Official Game.xhtml';">
 <td>X-Men: The Official Game</td>
@@ -4999,10 +3661,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>19 May 2006</td>
-<td></td>
+<td sorttable_customkey="20060519">19-05-2006</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/447 - Teen Titans.xhtml';">
 <td>Teen Titans</td>
@@ -5010,10 +3669,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>24 May 2006</td>
-<td></td>
+<td sorttable_customkey="20060524">24-05-2006</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/448 - ChibiRobo.xhtml';">
 <td>Chibi-Robo!</td>
@@ -5021,10 +3677,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>26 May 2006</td>
-<td></td>
+<td sorttable_customkey="20060526">26-05-2006</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/449 - PacMan World 3.xhtml';">
 <td>Pac-Man World 3</td>
@@ -5032,10 +3685,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>23 June 2006</td>
-<td></td>
+<td sorttable_customkey="20060623">23-06-2006</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/450 - Over the Hedge.xhtml';">
 <td>Over the Hedge</td>
@@ -5043,10 +3693,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>23 June 2006</td>
-<td></td>
+<td sorttable_customkey="20060623">23-06-2006</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/451 - Super Monkey Ball Adventure.xhtml';">
 <td>Super Monkey Ball Adventure</td>
@@ -5054,10 +3701,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>14 July 2006</td>
-<td></td>
+<td sorttable_customkey="20060714">14-07-2006</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/452 - Cars.xhtml';">
 <td>Cars</td>
@@ -5065,10 +3709,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>14 July 2006</td>
-<td></td>
+<td sorttable_customkey="20060714">14-07-2006</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/453 - The Ant Bully.xhtml';">
 <td>The Ant Bully</td>
@@ -5076,10 +3717,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>24 July 2006</td>
-<td></td>
+<td sorttable_customkey="20060724">24-07-2006</td>
 <td>NTSC</td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/454 - Monster House.xhtml';">
 <td>Monster House</td>
@@ -5087,10 +3725,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>04 August 2006</td>
-<td></td>
+<td sorttable_customkey="20060804">04-08-2006</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/455 - Madden NFL 07.xhtml';">
 <td>Madden NFL 07</td>
@@ -5098,10 +3733,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>22 August 2006</td>
-<td></td>
+<td sorttable_customkey="20060822">22-08-2006</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/456 - Lego Star Wars II The Original Trilogy.xhtml';">
 <td>Lego Star Wars II: The Original Trilogy</td>
@@ -5109,10 +3741,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>11 September 2006</td>
-<td></td>
+<td sorttable_customkey="20060911">11-09-2006</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/457 - The Grim Adventures of Billy  Mandy.xhtml';">
 <td>The Grim Adventures of Billy & Mandy</td>
@@ -5120,10 +3749,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>25 September 2006</td>
-<td></td>
+<td sorttable_customkey="20060925">25-09-2006</td>
 <td>NTSC</td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/458 - FIFA 07.xhtml';">
 <td>FIFA 07</td>
@@ -5131,10 +3757,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>29 September 2006</td>
-<td></td>
+<td sorttable_customkey="20060929">29-09-2006</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/459 - Open Season.xhtml';">
 <td>Open Season</td>
@@ -5142,10 +3765,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>06 October 2006</td>
-<td></td>
+<td sorttable_customkey="20061006">06-10-2006</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/460 - Barnyard.xhtml';">
 <td>Barnyard</td>
@@ -5153,10 +3773,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>13 October 2006</td>
-<td></td>
+<td sorttable_customkey="20061013">13-10-2006</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/461 - The Sims 2 Pets.xhtml';">
 <td>The Sims 2: Pets</td>
@@ -5164,10 +3781,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>20 October 2006</td>
-<td></td>
+<td sorttable_customkey="20061020">20-10-2006</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/462 - Nicktoons Battle for Volcano Island.xhtml';">
 <td>Nicktoons: Battle for Volcano Island</td>
@@ -5175,10 +3789,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>24 October 2006</td>
-<td></td>
+<td sorttable_customkey="20061024">24-10-2006</td>
 <td>NTSC</td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/463 - Tom Clancys Splinter Cell Double Agent.xhtml';">
 <td>Tom Clancy's Splinter Cell: Double Agent</td>
@@ -5186,10 +3797,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>27 October 2006</td>
-<td></td>
+<td sorttable_customkey="20061027">27-10-2006</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/464 - The Legend of Spyro A New Beginning.xhtml';">
 <td>The Legend of Spyro: A New Beginning</td>
@@ -5197,10 +3805,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>27 October 2006</td>
-<td></td>
+<td sorttable_customkey="20061027">27-10-2006</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/465 - Bratz Forever Diamondz.xhtml';">
 <td>Bratz: Forever Diamondz</td>
@@ -5208,10 +3813,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>03 November 2006</td>
-<td></td>
+<td sorttable_customkey="20061103">03-11-2006</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/466 - SpongeBob SquarePants Creature from the Krusty Krab.xhtml';">
 <td>SpongeBob SquarePants: Creature from the Krusty Krab</td>
@@ -5219,10 +3821,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>03 November 2006</td>
-<td></td>
+<td sorttable_customkey="20061103">03-11-2006</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/467 - Need for Speed Carbon.xhtml';">
 <td>Need for Speed Carbon</td>
@@ -5230,10 +3829,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>03 November 2006</td>
-<td></td>
+<td sorttable_customkey="20061103">03-11-2006</td>
 <td></td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/468 - Bionicle Heroes.xhtml';">
 <td>Bionicle Heroes</td>
@@ -5241,10 +3837,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>14 November 2006</td>
-<td></td>
+<td sorttable_customkey="20061114">14-11-2006</td>
 <td>NTSC</td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/469 - Happy Feet.xhtml';">
 <td>Happy Feet</td>
@@ -5252,10 +3845,7 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>14 November 2006</td>
-<td></td>
+<td sorttable_customkey="20061114">14-11-2006</td>
 <td>NTSC</td>
 </tr><tr data-status="Gamecube" onclick="document.location = 'details/470 - Naruto Clash of Ninja 2.xhtml';">
 <td>Naruto: Clash of Ninja 2</td>
@@ -5263,110 +3853,88 @@
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
+<td sorttable_customkey="20061124">24-11-2006</td>
 <td></td>
-<td></td>
-<td>24 November 2006</td>
-<td></td>
-<td></td>
-</tr><tr data-status="Gamecube" onclick="document.location = 'details/471 - Curious George.xhtml';">
-<td>Curious George</td>
-<td>Gamecube</td>
-<td>Y</td>
-<td>Y</td>
-<td>Y</td>
-<td></td>
-<td></td>
-<td>24 November 2006</td>
-<td></td>
-<td></td>
-</tr><tr data-status="Gamecube" onclick="document.location = 'details/472 - Flushed Away.xhtml';">
+</tr><tr data-status="Gamecube" onclick="document.location = 'details/471 - Flushed Away.xhtml';">
 <td>Flushed Away</td>
 <td>Gamecube</td>
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
+<td sorttable_customkey="20061124">24-11-2006</td>
 <td></td>
-<td></td>
-<td>24 November 2006</td>
-<td></td>
-<td></td>
-</tr><tr data-status="Gamecube" onclick="document.location = 'details/473 - Tomb Raider Legend.xhtml';">
+</tr><tr data-status="Gamecube" onclick="document.location = 'details/472 - Tomb Raider Legend.xhtml';">
 <td>Tomb Raider: Legend</td>
 <td>Gamecube</td>
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
+<td sorttable_customkey="20061201">01-12-2006</td>
 <td></td>
-<td></td>
-<td>01 December 2006</td>
-<td></td>
-<td></td>
-</tr><tr data-status="Gamecube" onclick="document.location = 'details/474 - Legend of Zelda Twilight Princess.xhtml';">
+</tr><tr data-status="Gamecube" onclick="document.location = 'details/473 - Legend of Zelda Twilight Princess.xhtml';">
 <td>Legend of Zelda: Twilight Princess</td>
 <td>Gamecube</td>
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
+<td sorttable_customkey="20061215">15-12-2006</td>
 <td></td>
-<td></td>
-<td>15 December 2006</td>
-<td></td>
-<td></td>
-</tr><tr data-status="Gamecube" onclick="document.location = 'details/475 - Avatar The Last Airbender.xhtml';">
+</tr><tr data-status="Gamecube" onclick="document.location = 'details/474 - Avatar The Last Airbender.xhtml';">
 <td>Avatar: The Last Airbender</td>
 <td>Gamecube</td>
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
+<td sorttable_customkey="20070209">09-02-2007</td>
 <td></td>
-<td></td>
-<td>09 February 2007</td>
-<td></td>
-<td></td>
-</tr><tr data-status="Gamecube" onclick="document.location = 'details/476 - Shrek Smash and Crash.xhtml';">
+</tr><tr data-status="Gamecube" onclick="document.location = 'details/475 - Shrek Smash and Crash.xhtml';">
 <td>Shrek Smash and Crash</td>
 <td>Gamecube</td>
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
+<td sorttable_customkey="20070316">16-03-2007</td>
 <td></td>
-<td></td>
-<td>16 March 2007</td>
-<td></td>
-<td></td>
-</tr><tr data-status="Gamecube" onclick="document.location = 'details/477 - TMNT.xhtml';">
+</tr><tr data-status="Gamecube" onclick="document.location = 'details/476 - TMNT.xhtml';">
 <td>TMNT</td>
 <td>Gamecube</td>
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
+<td sorttable_customkey="20070323">23-03-2007</td>
 <td></td>
-<td></td>
-<td>23 March 2007</td>
-<td></td>
-<td></td>
-</tr><tr data-status="Gamecube" onclick="document.location = 'details/478 - Disneys Meet the Robinsons.xhtml';">
+</tr><tr data-status="Gamecube" onclick="document.location = 'details/477 - Disneys Meet the Robinsons.xhtml';">
 <td>Disney's Meet the Robinsons</td>
 <td>Gamecube</td>
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>29 March 2007</td>
-<td></td>
+<td sorttable_customkey="20070329">29-03-2007</td>
 <td>NTSC</td>
-</tr><tr data-status="Gamecube" onclick="document.location = 'details/479 - Surfs Up.xhtml';">
+</tr><tr data-status="Gamecube" onclick="document.location = 'details/478 - Surfs Up.xhtml';">
 <td>Surf's Up</td>
 <td>Gamecube</td>
 <td>Y</td>
 <td>Y</td>
 <td>Y</td>
-<td></td>
-<td></td>
-<td>01 June 2007</td>
-<td></td>
+<td sorttable_customkey="20070601">01-06-2007</td>
 <td>NTSC</td>
+</tr><tr data-status="Gamecube" onclick="document.location = 'details/479 - Ratatouille.xhtml';">
+<td>Ratatouille</td>
+<td>Gamecube</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+<td sorttable_customkey="20070928">28-09-2007</td>
+<td></td>
+</tr><tr data-status="PS2" onclick="document.location = 'details/480 - Shadow of the Colossus.xhtml';">
+<td>Shadow of the Colossus</td>
+<td>PS2</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+<td sorttable_customkey="20060217">17-02-2006</td>
+<td>PAL</td>
 </tr>
 								</tbody>
 							</table>
@@ -5378,5 +3946,18 @@
 		
 	</div>
 </div>
+<script>
+$(document).ready(function () {
+    $('.btn-filter').on('click', function () {
+      var $target = $(this).data('target');
+      if ($target != 'all') {
+        $('tbody tr').css('display', 'none');
+        $('tbody tr[data-status="' + $target + '"]').show();
+      } else {
+        $('tbody tr').css('display', 'none').fadeIn('slow');
+      }
+    });
+ });
+</script>
    </body>
 </html>
