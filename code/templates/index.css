@@ -3,7 +3,6 @@
 	-------------------------------------------------- */
 body {
 	font-family: 'Open Sans', sans-serif;
-	/*background: url("http://rshunter-author.com/wp-content/uploads/2013/03/Psychonauts_Logo.jpg");*/
 	background: url("https://img00.deviantart.net/3979/i/2009/314/0/3/psychonauts_wallpaper_by_ayem.jpg");
 	background-color: black;
 	background-size: 100%;
@@ -24,18 +23,33 @@ th {
     text-align: center;
 }
 
+.dropdown{
+	background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
+	background-color: #5cb85c;
+	height: 29px;
+	overflow: hidden;
+	width: 240px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	color:white;
+}
+.dropdown select {
+   background-color: #5cb85c;
+   background: transparent;
+   border: none;
+   font-size: 14px;
+   height: 29px;
+   padding: 5px;
+   width: 268px;
+}
+
 /*	--------------------------------------------------
 	:: Table Filter
 	-------------------------------------------------- */
 .panel {
 	border: 1px solid #ddd;
 	background-color: #fcfcfc;
-}
-.panel .btn-group {
-	margin: 15px 0 30px;
-}
-.panel .btn-group .btn {
-	transition: background-color .3s ease;
 }
 .table-filter {
 	background-color: #fff;

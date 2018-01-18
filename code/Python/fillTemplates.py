@@ -1,7 +1,7 @@
 __author__ = 'Benjamin'
 
-import os, xlrd, re
-from shutil import copyfile, rmtree
+import os, xlrd, re, html
+from shutil import copyfile
 from datetime import datetime
 
 # initialiseer vars en open xlsx file
@@ -20,9 +20,14 @@ dateFormat = '%d-%m-%Y'
 # set index template vars
 platformSheet = book.sheet_by_name('Platforms')
 numPlatforms = platformSheet.nrows - 1
-buttonStart = '<button type="button" class="btn btn-success btn-filter" data-target="'
-buttonMiddle = '">'
-buttonEnd = '</button>\n'
+# buttonStart = '<button type="button" class="btn btn-success btn-filter" data-target="'
+# buttonMiddle = '">'
+# buttonEnd = '</button>\n'
+
+optionStart = '<option value="'
+optionMiddle = '">'
+optionEnd = '</option>\n'
+
 theadStart = '<th class="col-xs-2">'
 theadEnd = '</th>\n'
 trStart = '<tr data-status="'
@@ -32,15 +37,6 @@ trows = ''
 
 
 # index template methods
-def buildButtons():
-    buttons = ''
-    curRow = 0
-    while curRow < numPlatforms:
-        platform = platformSheet.cell_value(curRow, 0)
-        buttons += (buttonStart + platform + buttonMiddle + platform + buttonEnd)
-        curRow += 1
-    return buttons
-
 def buildTHeaders():
     theaders = ''
     curCol = 0
@@ -51,14 +47,24 @@ def buildTHeaders():
         curCol += 1
     return theaders
 
-# vul de placeholders [[BUTTONS]], [[THEADERS]] en [[TROWS]] in de indexTemplate
+# build the dropdown options
+def buildOptions():
+    options = ''
+    curRow = 0
+    while curRow < numPlatforms:
+        platform = platformSheet.cell_value(curRow, 0)
+        options += (optionStart + platform + optionMiddle + platform + optionEnd)
+        curRow += 1
+    return options
+
+# vul de placeholders [[OPTIONS]], [[THEADERS]] en [[TROWS]] in de indexTemplate
 def fillIndexTemplate():
     indexFile = '..\..\index.html'
-    buttons = buildButtons()
+    options = buildOptions()
     theaders = buildTHeaders()
     with open(indexFile, 'r') as file:
         filedata = file.read()
-    filedata = filedata.replace('[[BUTTONS]]', buttons)
+    filedata = filedata.replace('[[OPTIONS]]', options)
     filedata = filedata.replace('[[THEADERS]]', theaders)
     filedata = filedata.replace('[[TROWS]]', trows)
 
@@ -102,7 +108,7 @@ def cleanString(string):
 def fillTemplate(title, details, imgs, filename):
     with open(filename, 'r') as file:
         filedata = file.read()
-    filedata = filedata.replace('[[TITLE]]', title)
+    filedata = filedata.replace('[[TITLE]]', html.escape(title))
     filedata = filedata.replace('[[DETAILS]]', details)
     if(imgs == ''):
         filedata = filedata.replace('[[IMAGES]]', '<img src="https://www.socabelec.co.ke/wp-content/uploads/no-photo-14.jpg" />')
@@ -147,7 +153,7 @@ while currentRow < numRows+1:
                     cellValue = getDateAsString(cellValue)
                 elif columnName == 'Platform':
                     platform = cellValue
-                details += columnName + ": " + str(cellValue) + '<br />'
+                details += columnName + ": " + html.escape(str(cellValue)) + '<br />'
 
         if 'img' not in str(columnName).lower() and currentCol < showColumns:
             trow += tdSurround(cellValue, isDate)

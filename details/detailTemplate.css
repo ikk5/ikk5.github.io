@@ -64,17 +64,16 @@ img {
       -ms-flex-direction: column;
           flex-direction: column; }
 
-.product-title {
-  text-transform: UPPERCASE;
+.game-title {
   font-weight: bold; }
 
 .checked span {
   color: #ff9f1a; }
 
-.product-title, .description {
+.game-title, .description {
   margin-bottom: 15px; }
 
-.product-title {
+.game-title {
   margin-top: 0; }
 
 .tooltip-inner {
