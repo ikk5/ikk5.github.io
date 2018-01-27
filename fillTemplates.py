@@ -1,4 +1,6 @@
 __author__ = 'Benjamin'
+# -*- coding: utf-8 -*-
+
 
 import os, xlrd, re, html
 from shutil import copyfile
@@ -102,15 +104,18 @@ def imgSurround(imgUrl):
 
 
 # Verwijderd leestekens uit de filenaam, anders kan windows de file niet aanmaken of de link niet geopend worden
-def cleanString(string):
+def cleanFileName(string):
     return re.sub(r'[^\w\s]','',string)
+
+def removeIllegalCharsFromString(string):
+    return html.escape(string.replace('é', 'e'))
 
 
 # vul de placeholders [[TITLE]], [[DETAILS]] en [[IMAGES]] in de templates
 def fillTemplate(title, details, imgs, filename):
     with open(filename, 'r') as file:
         filedata = file.read()
-    filedata = filedata.replace('[[TITLE]]', html.escape(title))
+    filedata = filedata.replace('[[TITLE]]', removeIllegalCharsFromString(title))
     filedata = filedata.replace('[[DETAILS]]', details)
     if(imgs == ''):
         filedata = filedata.replace('[[IMAGES]]', '<img src="https://www.socabelec.co.ke/wp-content/uploads/no-photo-14.jpg" />')
@@ -138,7 +143,7 @@ while currentRow < numRows+1:
     trow = ''
     imgs = ''
 
-    numTitle = str(currentRow) + ' - ' + cleanString(sheet.cell_value(currentRow, 0)) + '.xhtml'
+    numTitle = str(currentRow) + ' - ' + cleanFileName(sheet.cell_value(currentRow, 0)) + '.xhtml'
     filename = detailsDirectory + '\\' + numTitle
     title = sheet.cell_value(currentRow, 0)
     initTemplate(filename)
@@ -155,7 +160,8 @@ while currentRow < numRows+1:
                     cellValue = getDateAsString(cellValue)
                 elif columnName == 'Platform':
                     platform = cellValue
-                details += columnName + ": " + html.escape(str(cellValue)) + '<br />'
+                cellValue = removeIllegalCharsFromString(str(cellValue))
+                details += columnName + ": " + cellValue + '<br />'
 
         if 'img' not in str(columnName).lower() and currentCol < showColumns:
             trow += tdSurround(cellValue, isDate)
