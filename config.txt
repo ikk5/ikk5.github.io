@@ -10,3 +10,6 @@ altImage = https://www.socabelec.co.ke/wp-content/uploads/no-photo-14.jpg
 
 #the title shown on the list page
 indexTitle = ikk's collection
+
+#Whether or not to open images on a new tab (Y/N)
+OpenImgOnNewTab = N

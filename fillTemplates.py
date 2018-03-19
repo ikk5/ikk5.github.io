@@ -22,7 +22,9 @@ dateFormat = config.get('config', 'dateFormat')
 background = config.get('config', 'background')
 altImage = config.get('config', 'altImage')
 indexTitle = config.get('config', 'indexTitle')
-
+imgTarget = ''
+if 'Y' == config.get('config', 'OpenImgOnNewTab'):
+    imgTarget = ' target="_blank"'
 
 # set index template vars
 platformSheet = book.sheet_by_name('Platforms')
@@ -118,7 +120,7 @@ def tdSurround(string, isDate):
 
 
 def imgSurround(imgUrl):
-    return '<img src="' + imgUrl + '"/>\n'
+    return '<a href="' + imgUrl + '"' + imgTarget + '><img src="' + imgUrl + '"/></a>\n'
 
 
 # removes the punctuation marks from the filename, otherwise windows can't create the file or the link can't be opened
