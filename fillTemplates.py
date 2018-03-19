@@ -2,11 +2,11 @@ __author__ = 'Benjamin'
 # -*- coding: utf-8 -*-
 
 
-import os, xlrd, re, html
+import os, xlrd, re, html, configparser
 from shutil import copyfile
 from datetime import datetime
 
-# initialiseer vars en open xlsx file
+# initialize vars and open xlsx file
 src = 'collection.xlsx'
 book = xlrd.open_workbook(src)
 sheet = book.sheet_by_name('Data')
@@ -14,9 +14,14 @@ numRows = sheet.nrows - 1
 numCols = sheet.ncols
 currentRow = 1
 
-#mogelijk voor de config:
-showColumns = 7 #bepaald hoeveel kolommen zichtbaar zijn
-dateFormat = '%d-%m-%Y'
+# read config file
+config = configparser.RawConfigParser()
+config.read(r'config.txt')
+showColumns = int(config.get('config', 'showColumns'))
+dateFormat = config.get('config', 'dateFormat')
+background = config.get('config', 'background')
+altImage = config.get('config', 'altImage')
+indexTitle = config.get('config', 'indexTitle')
 
 
 # set index template vars
@@ -54,21 +59,32 @@ def buildOptions():
         curRow += 1
     return options
 
-# vul de placeholders [[OPTIONS]], [[THEADERS]] en [[TROWS]] in de indexTemplate
+# replace the placeholders [[OPTIONS]], [[THEADERS]] and [[TROWS]] in the indexTemplate
 def fillIndexTemplate():
     indexFile = 'site\index.html'
     options = buildOptions()
     theaders = buildTHeaders()
     with open(indexFile, 'r') as file:
         filedata = file.read()
+    filedata = filedata.replace('[[INDEXTITLE]]', indexTitle)
     filedata = filedata.replace('[[OPTIONS]]', options)
     filedata = filedata.replace('[[THEADERS]]', theaders)
     filedata = filedata.replace('[[TROWS]]', trows)
 
     with open(indexFile, 'w') as file:
         file.write(filedata)
+    file.close()
 
-# als er een details map bestaat, wordt de inhoud hier verwijderd, anders wordt hij aangemaakt en wordt de css erin gekopieerd (anders geeft spellen verwijderen problemen).
+def replacePlaceholder(placeholder, replacement, filepath):
+    with open(filepath, 'r') as file:
+        filedata = file.read()
+    filedata = filedata.replace(placeholder, replacement)
+
+    with open(filepath, 'w') as file:
+        file.write(filedata)
+    file.close()
+
+# if there's a details folder, it removes the contents - otherwise the folder is created and filled with css (otherwise removing rows in the xlsx gives problems).
 detailsDirectory = 'site\details'
 templatesDirectory = 'code\\templates'
 cssDirectory = 'site\css'
@@ -83,6 +99,8 @@ else:
     os.makedirs(jsDirectory)
 copyfile(templatesDirectory + '\detailpage.css', cssDirectory + '\detailpage.css')
 copyfile(templatesDirectory + '\index.css', cssDirectory + '\index.css')
+replacePlaceholder('[[BACKGROUND]]', background, cssDirectory + '\detailpage.css')
+replacePlaceholder('[[BACKGROUND]]', background, cssDirectory + '\index.css')
 copyfile(templatesDirectory + '\indexTemplate.html', 'site\index.html')
 copyfile('code\js\sorttable.js', jsDirectory + '\sorttable.js')
 templateName = templatesDirectory + '\detailTemplate.xhtml'
@@ -94,7 +112,7 @@ def trSurround(platform, link, tds):
 
 def tdSurround(string, isDate):
     if (isDate):
-        return '<td sorttable_customkey="' + datetime.strptime(string, '%d-%m-%Y').strftime('%Y%m%d') + '">' + string + '</td>\n'
+        return '<td sorttable_customkey="' + datetime.strptime(string, dateFormat).strftime('%Y%m%d') + '">' + string + '</td>\n'
     else:
         return '<td>' + string + '</td>\n'
 
@@ -103,7 +121,7 @@ def imgSurround(imgUrl):
     return '<img src="' + imgUrl + '"/>\n'
 
 
-# Verwijderd leestekens uit de filenaam, anders kan windows de file niet aanmaken of de link niet geopend worden
+# removes the punctuation marks from the filename, otherwise windows can't create the file or the link can't be opened
 def cleanFileName(string):
     return re.sub(r'[^\w\s]','',string)
 
@@ -111,19 +129,20 @@ def removeIllegalCharsFromString(string):
     return html.escape(string.replace('é', 'e'))
 
 
-# vul de placeholders [[TITLE]], [[DETAILS]] en [[IMAGES]] in de templates
-def fillTemplate(title, details, imgs, filename):
+# replace the placeholders [[TITLE]], [[DETAILS]] and [[IMAGES]] in the templates
+def fillDetailsTemplate(title, details, imgs, filename):
     with open(filename, 'r') as file:
         filedata = file.read()
     filedata = filedata.replace('[[TITLE]]', removeIllegalCharsFromString(title))
     filedata = filedata.replace('[[DETAILS]]', details)
     if(imgs == ''):
-        filedata = filedata.replace('[[IMAGES]]', '<img src="https://www.socabelec.co.ke/wp-content/uploads/no-photo-14.jpg" />')
+        filedata = filedata.replace('[[IMAGES]]', '<img src="' + altImage +'" />')
     else:
         filedata = filedata.replace('[[IMAGES]]', imgs)
 
     with open(filename, 'w') as file:
         file.write(filedata)
+    file.close()
 
 
 def initTemplate(filename):
@@ -135,17 +154,17 @@ def getDateAsString(date):
     return date.strftime(dateFormat)
 
 
-# lees de collection.xlsx uit, maak een template pagina voor de regel en haal titel en details op
+# read the collecion.xlsx, make a template page for each row and fetch title and details
 while currentRow < numRows+1:
     currentCol = 0
     details = ''
-    platform = ''
     trow = ''
     imgs = ''
 
     numTitle = str(currentRow) + ' - ' + cleanFileName(sheet.cell_value(currentRow, 0)) + '.xhtml'
     filename = detailsDirectory + '\\' + numTitle
     title = sheet.cell_value(currentRow, 0)
+    platform = sheet.cell_value(currentRow, 1)
     initTemplate(filename)
     while currentCol < numCols:
         cellValue = sheet.cell_value(currentRow, currentCol)
@@ -158,8 +177,6 @@ while currentRow < numRows+1:
                 if 'date' in str(columnName).lower() or 'datum' in str(columnName).lower():
                     isDate = True
                     cellValue = getDateAsString(cellValue)
-                elif columnName == 'Platform':
-                    platform = cellValue
                 cellValue = removeIllegalCharsFromString(str(cellValue))
                 details += columnName + ": " + cellValue + '<br />'
 
@@ -167,7 +184,7 @@ while currentRow < numRows+1:
             trow += tdSurround(cellValue, isDate)
         currentCol += 1
     trows += trSurround(platform, numTitle, trow)
-    fillTemplate(title, details, imgs, filename)
+    fillDetailsTemplate(title, details, imgs, filename)
     print(details)
     currentRow += 1
 

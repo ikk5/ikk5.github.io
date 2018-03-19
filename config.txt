@@ -1,0 +1,12 @@
+[config]
+#the number of visible columns:
+showColumns = 7
+
+dateFormat = %d-%m-%Y
+background = https://img00.deviantart.net/3979/i/2009/314/0/3/psychonauts_wallpaper_by_ayem.jpg
+
+#the image shown when there is nog image:
+altImage = https://www.socabelec.co.ke/wp-content/uploads/no-photo-14.jpg
+
+#the title shown on the list page
+indexTitle = ikk's collection
