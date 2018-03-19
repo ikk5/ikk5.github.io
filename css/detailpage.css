@@ -1,7 +1,13 @@
 
 /*****************globals*************/
 body {
-  font-family: 'open sans';
+  font-family: Verdana, Geneva, sans-serif;
+  background: url("https://img00.deviantart.net/3979/i/2009/314/0/3/psychonauts_wallpaper_by_ayem.jpg"); /* Placeholder to be filled by the script */
+  background-color: black;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
   overflow-x: hidden; }
 
 img {
