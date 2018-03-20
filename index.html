@@ -3,7 +3,6 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-  
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -14,16 +13,15 @@
 	<link rel="stylesheet" type="text/css" href="css/index.css"/>
 
   </head>
-
   <body class="background">
-  <div class="container">
-	<div class="row">
-		<section class="content">
-			<div class="dropdown pull-left">
-							<select id="dropdown-filter">
-								<option value="all">All</option>
-								<!-- Hier komen alle dropdown opties -->
-								<option value="3DS">3DS</option>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+					<div class="dropdown">
+						<select id="dropdown-filter">
+							<option value="all">All</option>
+							<!-- Hier komen alle dropdown opties -->
+							<option value="3DS">3DS</option>
 <option value="Accessoire">Accessoire</option>
 <option value="Amiibo">Amiibo</option>
 <option value="Atari 2600">Atari 2600</option>
@@ -56,18 +54,24 @@
 <option value="XBONE">XBONE</option>
 <option value="XBOX">XBOX</option>
 
-							</select>
-						</div>
-			<input type="text" id="searchTerm" class="search_box pull-right" placeholder="Search..." onkeyup="doSearch()" />
-			<h1>ikk's collection <sub id="counter"></sub></h1>
-			<div class="col-xs-100">
-				<div class="panel panel-default">
+						</select>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+					<h1>ikk's collection <sub id="counter"></sub></h1>
+				</div>
+				<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+					<input type="text" id="searchTerm" class="search_box" placeholder="Search..." onkeyup="doSearch()" />
+				</div>
+			</div>
+		</div>
+			<div class="container">
+				<div class="panel">
 					<div class="panel-body">
-						<div class="table-container">
-							<table id="collectionTable" class="table table-filter sortable">
-								<thead>
-									<!-- Hier komen alle tabel headers -->
-									<th class="col-xs-2">Titel</th>
+						<table id="collectionTable" class="table table-filter sortable">
+							<thead>
+								<!-- Hier komen alle tabel headers -->
+								<th class="col-xs-2">Titel</th>
 <th class="col-xs-2">Platform</th>
 <th class="col-xs-2">Completeness</th>
 <th class="col-xs-2">Release date</th>
@@ -75,10 +79,10 @@
 <th class="col-xs-2">Notes</th>
 <th class="col-xs-2">Played</th>
 
-								</thead>
-								<tbody>
-									<!-- Hier komt de daadwerkelijke data -->
-									<tr data-status="Switch" onclick="document.location = 'details/1 - Super Mario Odyssey.xhtml';">
+							</thead>
+							<tbody>
+								<!-- Hier komt de daadwerkelijke data -->
+								<tr data-status="Switch" onclick="document.location = 'details/1 - Super Mario Odyssey.xhtml';">
 <td>Super Mario Odyssey</td>
 <td>Switch</td>
 <td>CIB</td>
@@ -7719,16 +7723,12 @@
 <td></td>
 <td></td>
 </tr>
-								</tbody>
-							</table>
-						 </div>
+							</tbody>
+						</table>
 					</div>
 				</div>
 			</div>
-		</section>
-		
-	</div>
-</div>
+		</div>
 <script>
 //initialize on pageload
 window.onload = function(){

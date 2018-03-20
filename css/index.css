@@ -13,18 +13,18 @@ body {
 th {
 	cursor: pointer;
 }
-.content h1 {
-	text-align: center;
+h1, sub {
 	color: white;
-}
-.content sub {
-	vertical-align: middle;
 	padding-bottom: 2%;
 }
-.content p {
-	color: #6d6d6d;
-    font-size: 12px;
-    text-align: center;
+
+sub{
+	vertical-align: middle;
+	padding-bottom: 3%;
+}
+.row {
+  display: flex;
+  align-items: center;
 }
 
 .dropdown{
