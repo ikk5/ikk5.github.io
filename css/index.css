@@ -1,3 +1,76 @@
+
+/*
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+   @media
+   only screen and (max-width: 760px),
+   (min-device-width: 768px) and (max-device-width: 1024px)  {
+
+      /* Force table to not be like tables anymore */
+      table, thead, tbody, th, td, tr {
+         display: block;
+      }
+      
+      /* Hide table headers (but not display: none;, for accessibility) */
+      thead tr {
+         position: absolute;
+         top: -9999px;
+         left: -9999px;
+      }
+      
+      tr { border: 1px solid #ccc; }
+      
+      td {
+         /* Behave  like a "row" */
+         border: none;
+         border-bottom: 1px solid #eee;
+      }
+      
+      td:before {
+         /* Now like a table header */
+         padding-right: 10px;
+         white-space: nowrap;
+      }
+      
+      /*
+      Label the data
+      */
+      td:nth-of-type(1):before { content: "Titel";}
+      td:nth-of-type(2):before { content: "Platform"; }
+      td:nth-of-type(3):before { content: "Completeness"; }
+      td:nth-of-type(4):before { content: "Release date"; }
+      td:nth-of-type(5):before { content: "Regio"; }      
+      td:nth-of-type(6):before { content: "Notes"; }
+      td:nth-of-type(7):before { content: "Played"; }
+   }
+
+/* Smartphones (portrait and landscape) ----------- */
+   @media only screen
+   and (min-device-width : 320px)
+   and (max-device-width : 480px) {
+      body {
+         padding: 5px;
+         margin: 0;
+         width: 350px;
+         font-size: 120%;
+      }
+      #input-filter {
+         font-size:24px;
+      }
+      .input-filter-container {
+         margin: 15px 0;
+      }
+   }
+   
+   /* iPads (portrait and landscape) ----------- */
+   @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+      body {
+         width: 495px;
+      }
+   }
+
 /*    --------------------------------------------------
 	:: General
 	-------------------------------------------------- */
@@ -33,8 +106,8 @@ sub{
 	height: 29px;
 	overflow: hidden;
 	width: 240px;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
+	/*-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;*/
 	border-radius: 5px;
 	color:white;
 }
@@ -64,18 +137,10 @@ sub{
 	background-color: #eee;
 }
 .table-filter tbody tr td {
-	padding: 10px;
-	vertical-align: middle;
 	border-top-color: #eee;
 }
 .table-filter tbody tr.selected td {
 	background-color: #eee;
-}
-.table-filter tr td:first-child {
-	width: 38px;
-}
-.table-filter tr td:nth-child(2) {
-	width: 35px;
 }
 /* Sortable tables */
 table.sortable thead {

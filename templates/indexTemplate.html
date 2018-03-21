@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="js/sorttable.js"></script>
+
+    <title>[[INDEXTITLE]]</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css"/>
+
+  </head>
+  <body class="background">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+					<div class="dropdown">
+						<select id="dropdown-filter">
+							<option value="all">All</option>
+							<!-- Hier komen alle dropdown opties -->
+							[[OPTIONS]]
+						</select>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+					<h1>[[INDEXTITLE]] <sub id="counter"></sub></h1>
+				</div>
+				<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+					<input type="text" id="searchTerm" class="search_box" placeholder="Search..." onkeyup="doSearch()" />
+				</div>
+			</div>
+		</div>
+			<div class="container">
+				<div class="panel">
+					<div class="panel-body">
+						<table id="collectionTable" class="table table-filter sortable">
+							<thead>
+								<!-- Hier komen alle tabel headers -->
+								<tr>
+								[[THEADERS]]
+								</tr>
+							</thead>
+							<tbody>
+								<!-- Hier komt de daadwerkelijke data -->
+								[[TROWS]]
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+<script>
+//initialize on pageload
+window.onload = function(){
+	document.getElementById('counter').innerHTML='(' + ($('tr:visible').length-1).toString() + ')';
+	document.getElementById('searchTerm').value='';
+	document.getElementById('dropdown-filter').value='all';	
+}
+
+var $filter = 'all';
+$('#dropdown-filter').on('change', function () {
+	$filter = $(this).val();
+	if ($filter != 'all') {
+		$('tbody tr').css('display', 'none');
+		$('tbody tr[data-status="' + $filter + '"]').show();
+	} else {
+		$('tbody tr').css('display', 'none').fadeIn('slow');
+	}
+	//Reset the searchfield
+	document.getElementById('searchTerm').value='';
+	//set the counter
+	document.getElementById('counter').innerHTML='(' + ($('tr:visible').length-1).toString() + ')';
+    });
+
+
+	
+function doSearch() {
+    var searchText = document.getElementById('searchTerm').value;
+    var targetTable = document.getElementById('collectionTable');
+    var targetTableColCount;
+            
+    //Loop through table rows
+    for (var rowIndex = 0; rowIndex < targetTable.rows.length; rowIndex++) {
+        var rowData = '';
+
+        //Get column count from header row
+        if (rowIndex == 0) {
+           targetTableColCount = targetTable.rows.item(rowIndex).cells.length;
+           continue; //do not execute further code for header row.
+        }
+		
+		//Skip row if it's filtered
+		if($filter != 'all' && targetTable.rows.item(rowIndex).getAttribute('data-status') != $filter){
+			continue;
+		}
+                
+        //Process data rows. (rowIndex >= 1)
+        for (var colIndex = 0; colIndex < targetTableColCount; colIndex++) {
+            rowData += targetTable.rows.item(rowIndex).cells.item(colIndex).textContent;
+        }
+
+        //If search term is not found in row data
+        //then hide the row, else show
+        if (rowData.toLowerCase().indexOf(searchText.toLowerCase()) == -1)
+            targetTable.rows.item(rowIndex).style.display = 'none';
+        else
+            targetTable.rows.item(rowIndex).style.display = 'table-row';
+    }
+	//set the counter
+	//alert('(' + ($('tr:visible').length-1).toString() + ')');
+	document.getElementById('counter').innerHTML='(' + ($('tr:visible').length-1).toString() + ')';
+}
+</script>
+   </body>
+</html>

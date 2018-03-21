@@ -1,0 +1,76 @@
+/*    --------------------------------------------------
+	:: General
+	-------------------------------------------------- */
+body {
+	font-family: 'Open Sans', sans-serif;
+	background: url("[[BACKGROUND]]"); /* Placeholder to be filled by the script */
+	background-color: black;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center center;
+}
+th {
+	cursor: pointer;
+}
+h1, sub {
+	color: white;
+	padding-bottom: 2%;
+}
+
+sub{
+	vertical-align: middle;
+	padding-bottom: 3%;
+}
+.row {
+  display: flex;
+  align-items: center;
+}
+
+.dropdown{
+	background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
+	background-color: #5cb85c;
+	height: 29px;
+	overflow: hidden;
+	width: 240px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	color:white;
+}
+.dropdown select {
+   background-color: #5cb85c;
+   background: transparent;
+   border: none;
+   font-size: 14px;
+   height: 29px;
+   padding: 5px;
+   width: 268px;
+}
+
+/*	--------------------------------------------------
+	:: Table Filter
+	-------------------------------------------------- */
+.panel {
+	border: 1px solid #ddd;
+	background-color: #fcfcfc;
+}
+.table-filter {
+	background-color: #fff;
+	border-bottom: 1px solid #eee;
+}
+.table-filter tbody tr:hover {
+	cursor: pointer;
+	background-color: #eee;
+}
+.table-filter tbody tr td {
+	border-top-color: #eee;
+}
+.table-filter tbody tr.selected td {
+	background-color: #eee;
+}
+/* Sortable tables */
+table.sortable thead {
+    font-weight: bold;
+    cursor: default;
+}
