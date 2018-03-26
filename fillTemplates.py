@@ -29,53 +29,8 @@ if 'Y' == config.get('config', 'OpenImgOnNewTab'):
 # set index template vars
 platformSheet = book.sheet_by_name('Platforms')
 numPlatforms = platformSheet.nrows - 1
-optionStart = '<option value="'
-optionMiddle = '">'
-optionEnd = '</option>\n'
-theadStart = '<th class="col-xs-2">'
-theadEnd = '</th>\n'
-trStart = '<tr data-status="'
-trMiddle = '" onclick="document.location = \''
-trEnd = '\';">\n'
 trows = ''
 
-
-# index template methods
-def buildTHeaders():
-    theaders = ''
-    curCol = 0
-    while curCol < numCols and curCol < showColumns:
-        thead = sheet.cell_value(0, curCol)
-        if('img' not in str(thead).lower()):
-            theaders += (theadStart + thead + theadEnd)
-        curCol += 1
-    return theaders
-
-# build the dropdown options
-def buildOptions():
-    options = ''
-    curRow = 0
-    while curRow < numPlatforms:
-        platform = platformSheet.cell_value(curRow, 0)
-        options += (optionStart + platform + optionMiddle + platform + optionEnd)
-        curRow += 1
-    return options
-
-# replace the placeholders [[OPTIONS]], [[THEADERS]] and [[TROWS]] in the indexTemplate
-def fillIndexTemplate():
-    indexFile = 'site\index.html'
-    options = buildOptions()
-    theaders = buildTHeaders()
-    with open(indexFile, 'r') as file:
-        filedata = file.read()
-    filedata = filedata.replace('[[INDEXTITLE]]', indexTitle)
-    filedata = filedata.replace('[[OPTIONS]]', options)
-    filedata = filedata.replace('[[THEADERS]]', theaders)
-    filedata = filedata.replace('[[TROWS]]', trows)
-
-    with open(indexFile, 'w') as file:
-        file.write(filedata)
-    file.close()
 
 def replacePlaceholder(placeholder, replacement, filepath):
     with open(filepath, 'r') as file:
@@ -108,8 +63,52 @@ copyfile('code\js\sorttable.js', jsDirectory + '\sorttable.js')
 templateName = templatesDirectory + '\detailTemplate.xhtml'
 
 
+# index template methods
+def buildTHeaders():
+    theaders = ''
+    contentLabels = ''
+    curCol = 0
+    while curCol < numCols and curCol < showColumns:
+        thead = sheet.cell_value(0, curCol)
+        if(curCol == 0):
+            contentLabels += 'td:nth-of-type(1):before { content: "' + thead + '";}\n'
+            theaders += ('<th class="col-xs-2">' + thead + '</th>\n')
+        elif('img' not in str(thead).lower()):
+            contentLabels += 'td:nth-of-type(' + str(curCol + 1) + '):before { content: "' + thead + '";}\n'
+            theaders += ('<th class="col-xs-1">' + thead + '</th>\n')
+        curCol += 1
+    replacePlaceholder('[[CONTENTLABELS]]', contentLabels, cssDirectory + '\index.css')
+    return theaders
+
+# build the dropdown options
+def buildOptions():
+    options = ''
+    curRow = 0
+    while curRow < numPlatforms:
+        platform = platformSheet.cell_value(curRow, 0)
+        options += ('<option value="' + platform + '">' + platform + '</option>\n')
+        curRow += 1
+    return options
+
+# replace the placeholders [[OPTIONS]], [[THEADERS]] and [[TROWS]] in the indexTemplate
+def fillIndexTemplate():
+    indexFile = 'site\index.html'
+    options = buildOptions()
+    theaders = buildTHeaders()
+    with open(indexFile, 'r') as file:
+        filedata = file.read()
+    filedata = filedata.replace('[[INDEXTITLE]]', indexTitle)
+    filedata = filedata.replace('[[OPTIONS]]', options)
+    filedata = filedata.replace('[[THEADERS]]', theaders)
+    filedata = filedata.replace('[[TROWS]]', trows)
+
+    with open(indexFile, 'w') as file:
+        file.write(filedata)
+    file.close()
+
+
 def trSurround(platform, link, tds):
-    return trStart + platform + trMiddle + 'details/' + link + trEnd + tds + '</tr>'
+    return '<tr data-status="' + platform + '" onclick="document.location = \'' + 'details/' + link + '\';">\n' + tds + '</tr>'
 
 
 def tdSurround(string, isDate):
