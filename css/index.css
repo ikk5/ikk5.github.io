@@ -56,6 +56,9 @@ td:nth-of-type(7):before { content: "Played";}
          width: 350px;
          font-size: 120%;
       }
+	  sub{
+		bottom: -.25em !important;
+	}
       #input-filter {
          font-size:24px;
       }
@@ -88,12 +91,13 @@ th {
 }
 h1, sub {
 	color: white;
-	padding-bottom: 2%;
+}
+sub{
+	bottom: 0em;
 }
 
-sub{
-	vertical-align: middle;
-	padding-bottom: 3%;
+.search_box{
+	margin-top: 20px;
 }
 
 .dropdown{
@@ -104,7 +108,9 @@ sub{
 	width: 240px;
 	border-radius: 5px;
 	color:white;
+	margin-top: 20px;
 }
+
 .dropdown select {
    background-color: #5cb85c;
    background: transparent;
@@ -113,6 +119,10 @@ sub{
    height: 29px;
    padding: 5px;
    width: 268px;
+}
+
+option{
+	color:black;
 }
 
 /*	--------------------------------------------------
