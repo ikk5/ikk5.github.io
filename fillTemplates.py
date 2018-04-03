@@ -10,7 +10,7 @@ from datetime import datetime
 src = 'collection.xlsx'
 book = xlrd.open_workbook(src)
 sheet = book.sheet_by_name('Data')
-numRows = sheet.nrows - 1
+numRows = sheet.nrows
 numCols = sheet.ncols
 currentRow = 1
 
@@ -28,7 +28,7 @@ if 'Y' == config.get('config', 'OpenImgOnNewTab'):
 
 # set index template vars
 platformSheet = book.sheet_by_name('Platforms')
-numPlatforms = platformSheet.nrows - 1
+numPlatforms = platformSheet.nrows
 trows = ''
 
 
@@ -156,7 +156,7 @@ def getDateAsString(date):
 
 
 # read the collecion.xlsx, make a template page for each row and fetch title and details
-while currentRow < numRows+1:
+while currentRow < numRows:
     currentCol = 0
     details = ''
     trow = ''
