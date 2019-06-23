@@ -2,9 +2,13 @@ __author__ = 'Benjamin'
 # -*- coding: utf-8 -*-
 
 
-import os, xlrd, re, html, configparser
-from shutil import copyfile
+import configparser
+import html
+import os
+import re
+import xlrd
 from datetime import datetime
+from shutil import copyfile
 
 # initialize vars and open xlsx file
 src = 'collection.xlsx'
@@ -72,7 +76,7 @@ def buildTHeaders():
         thead = sheet.cell_value(0, curCol)
         if(curCol == 0):
             contentLabels += 'td:nth-of-type(1):before { content: "' + thead + '";}\n'
-            theaders += ('<th class="col-xs-2">' + thead + '</th>\n')
+            theaders += ('<th class="col-xs-2 sorttable_alpha">' + thead + '</th>\n')
         elif('img' not in str(thead).lower()):
             contentLabels += 'td:nth-of-type(' + str(curCol + 1) + '):before { content: "' + thead + '";}\n'
             theaders += ('<th class="col-xs-1">' + thead + '</th>\n')
