@@ -133,13 +133,16 @@ def cleanFileName(string):
 def removeIllegalCharsFromString(string):
     return html.escape(string.replace('é', 'e'))
 
+def replaceSpecialChars(string):
+    return string.replace('€', '&euro;')
+
 
 # replace the placeholders [[TITLE]], [[DETAILS]] and [[IMAGES]] in the templates
 def fillDetailsTemplate(title, details, imgs, filename):
     with open(filename, 'r') as file:
         filedata = file.read()
     filedata = filedata.replace('[[TITLE]]', removeIllegalCharsFromString(title))
-    filedata = filedata.replace('[[DETAILS]]', details)
+    filedata = filedata.replace('[[DETAILS]]', replaceSpecialChars(details))
     if(imgs == ''):
         filedata = filedata.replace('[[IMAGES]]', '<img src="' + altImage +'" />')
     else:
