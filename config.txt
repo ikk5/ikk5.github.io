@@ -1,6 +1,6 @@
 [config]
 #the number of visible columns:
-showColumns = 7
+showColumns = 8
 
 dateFormat = %d-%m-%Y
 background = https://img00.deviantart.net/3979/i/2009/314/0/3/psychonauts_wallpaper_by_ayem.jpg
