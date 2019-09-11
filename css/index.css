@@ -79,7 +79,7 @@ td:nth-of-type(7):before { content: "Played";}
 	-------------------------------------------------- */
 body {
 	font-family: 'Open Sans', sans-serif;
-	background: url("https://img00.deviantart.net/3979/i/2009/314/0/3/psychonauts_wallpaper_by_ayem.jpg"); /* Placeholder to be filled by the script */
+	background: url("https://images3.alphacoders.com/215/215349.jpg"); /* Placeholder to be filled by the script */
 	background-color: black;
 	background-size: 100%;
 	background-repeat: no-repeat;
@@ -101,8 +101,17 @@ sub{
 }
 
 .dropdown{
-	background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
+	background-image: 
+		linear-gradient(45deg, transparent 50%, white 50%),
+		linear-gradient(135deg, white 50%, transparent 50%),
+		linear-gradient(to right, #ccc, #ccc);
 	background-color: #5cb85c;
+	background-position:
+		calc(100% - 20px) calc(1em - 2px),
+		calc(100% - 15px) calc(1em - 2px),
+		calc(100% - 2.5em);
+	background-size: 7px 10px, 7px 10px, 1px 1.75em;
+	background-repeat: no-repeat;
 	height: 29px;
 	overflow: hidden;
 	width: 240px;

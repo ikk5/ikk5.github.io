@@ -94,8 +94,17 @@ sub{
 }
 
 .dropdown{
-	background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
+	background-image: 
+		linear-gradient(45deg, transparent 50%, white 50%),
+		linear-gradient(135deg, white 50%, transparent 50%),
+		linear-gradient(to right, #ccc, #ccc);
 	background-color: #5cb85c;
+	background-position:
+		calc(100% - 20px) calc(1em - 2px),
+		calc(100% - 15px) calc(1em - 2px),
+		calc(100% - 2.5em);
+	background-size: 7px 10px, 7px 10px, 1px 1.75em;
+	background-repeat: no-repeat;
 	height: 29px;
 	overflow: hidden;
 	width: 240px;
