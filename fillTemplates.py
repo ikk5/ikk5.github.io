@@ -128,10 +128,12 @@ def imgSurround(imgUrl):
 
 # removes the punctuation marks from the filename, otherwise windows can't create the file or the link can't be opened
 def cleanFileName(string):
-    return re.sub(r'[^\w\s]','',string)
+    return re.sub(r'[^\w\s]', '', string)
 
 def removeIllegalCharsFromString(string):
+    string = string.replace('’', "'")
     return html.escape(string.replace('é', 'e'))
+
 
 def replaceSpecialChars(string):
     return string.replace('€', '&euro;')
